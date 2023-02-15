@@ -36,7 +36,7 @@ const QuizData = () => {
         getQuiz(quizId);
         // console.log("questions:", questions)
         // console.log("quiz id", quizId);
-      }, [quizId, status])
+      }, [quizId, status, navigate])
   return (
     <div className={`${styles.quizDataContainer} mt-3`}>
         <div>
