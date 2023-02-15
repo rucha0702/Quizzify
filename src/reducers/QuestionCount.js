@@ -5,14 +5,15 @@ const initialState = {
     switch (action.type) {
 
         case 'INC_QUESTION_NUM':
-            const data = action.payload;
+            const data = action.payload.data;
+            const length= action.payload.length;
             return {
                 ...state,
         
-                questionCount: data<9?data + 1:9
+                questionCount: data<length-1?data + 1:length-1
               };
         case 'DEC_QUESTION_NUM':
-            const d = action.payload
+            const d = action.payload.data
             return {
                 ...state,
         

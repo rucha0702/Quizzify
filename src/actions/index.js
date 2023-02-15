@@ -32,20 +32,26 @@ export const SetQuizDetails = (data) => {
     payload:data
   };
 };
-
-//For incrementing the quiz question counter
-export const IncQuestionNum = (data) => {
+export const SetLength = (data) => {
   return {
-    type: 'INC_QUESTION_NUM',
+    type: 'SET_LENGTH',
     payload:data
   };
 };
 
+//For incrementing the quiz question counter
+export const IncQuestionNum = (data, length) => {
+  return {
+    type: 'INC_QUESTION_NUM',
+    payload:{data, length }
+  };
+};
+
 //For decrementing the quiz question counter
-export const DecQuestionNum = (data) => {
+export const DecQuestionNum = (data, length) => {
   return {
     type: 'DEC_QUESTION_NUM',
-    payload:data
+    payload:{data, length}
   };
 };
 

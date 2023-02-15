@@ -14,7 +14,7 @@ import styles from './QuizData.module.css';
 const QuizData = () => {
   //  let quiz;
   //  let dispatch = useDispatch();
-   const count = useSelector(state=>state.QuestionCount);
+   const count = useSelector(state=>state.QuestionCount.questionCount);
    const quizId = useSelector(state=>state.SetQuizId.quizId);
     const [questions, setQuestions] = useState([])
     useEffect(() => {
