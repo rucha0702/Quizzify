@@ -4,7 +4,7 @@ import { useSelector} from 'react-redux';
 import { getQuizData } from '../../api/quizData';
 // import { Total } from '../../actions';
 import UserQuestion from './UserQuestion';
-import { Navigate, useNavigate } from 'react-router-dom';
+import {useNavigate } from 'react-router-dom';
 // import Navbar from '../user/navbar/Navbar';
 import QuestionCounter from './QuestionCounter';
 import NavigateQuestions from './NavigateQuestions';
@@ -36,7 +36,7 @@ const QuizData = () => {
         getQuiz(quizId);
         // console.log("questions:", questions)
         // console.log("quiz id", quizId);
-      }, [quizId])
+      }, [quizId, status])
   return (
     <div className={`${styles.quizDataContainer} mt-3`}>
         <div>
