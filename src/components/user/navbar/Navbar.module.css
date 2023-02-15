@@ -1,0 +1,15 @@
+.navContainer{
+    background: var(--bg-color);
+}
+
+.navbarTitle {
+    background:url('../../../images/logo.png') center center/cover;
+    height:1.1rem;
+    width:2.2rem;
+    margin: auto;
+}
+
+.gdsc{
+    font-size: 15px;
+    font-weight: 600;
+}

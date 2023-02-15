@@ -1,0 +1,18 @@
+.sidebar{
+    flex:0.17;
+    /* background:red; */
+}
+.dashboard{
+    flex:0.83;
+    background: var(--bg-color);
+}
+.textBold{
+    font-weight: 700;
+}
+.quizCard{
+    background: var(--bg-light);
+    flex:0.3;
+    height:10rem;
+    cursor: pointer;
+    /* font-weight: 700; */
+}

@@ -1,0 +1,8 @@
+.sidebar{
+    flex:0.17;
+    /* background:red; */
+}
+.dashboard{
+    flex:0.83;
+    background: var(--bg-color);
+}

@@ -1,0 +1,12 @@
+:root{
+    --bg-color: white;
+    --bg-light:#F1F1F1;
+    --text-dark:#131314;
+    --text-light:rgba(201, 115, 46, 0.5);
+    --extra-bold: 700;
+    --primaryColor:#F3FF69;
+    --secondaryColor:#06C270;
+    --tertiaryColor:#FECC45;
+    --lightGreen:rgba(140, 164, 16,0.5);
+    --lightGreenShadow: inset 0 -3em 3em rgba(140, 164, 16,0.5);
+}

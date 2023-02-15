@@ -1,0 +1,15 @@
+.sidebar{
+    min-height: 100vh;
+    background: var(--lightGreen);
+    /* box-shadow: var(--lightGreen); */
+    padding-left: 40% !important;
+}
+.sidebarTop{
+    flex:0.2;
+}
+.sidebarMid{
+    flex:0.8;
+}
+.head{
+    font-weight: 700;
+}

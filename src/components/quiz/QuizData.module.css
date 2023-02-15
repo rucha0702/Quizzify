@@ -1,0 +1,19 @@
+.question{
+    flex:0.6;
+}
+.navigation{
+    flex:0.4;
+}
+.quizDataContainer{
+    position: relative;
+    /* background: red; */
+}
+
+@media (max-width:768px){
+    .navigation{
+        display: none;
+    }
+    .question{
+        flex:1;
+    }
+}

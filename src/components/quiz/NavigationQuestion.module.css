@@ -1,0 +1,11 @@
+.navigationButton{
+    /* background: greenyellow; */
+    box-shadow: inset 0 -3em 3em rgba(194, 194, 185, 0.5);
+    width:3rem;
+    height:3rem;
+}
+.navigationButtonChecked{
+    box-shadow: var(--lightGreenShadow);
+    width:3rem;
+    height:3rem;
+}

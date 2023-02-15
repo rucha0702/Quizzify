@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@800&display=swap');
+
+.registerContainer{
+    background: var(--secondaryColor);
+    min-height: 100vh;
+   position: fixed;
+   top:0;
+   width:100%;
+}
+.heading{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    /* background-color: var(--secondaryColor); */
+}
+.lightText{
+    color:var(--text-light);
+}
+.extraText{
+    width:45%;
+    font-size: 0.8rem;
+    /* word-spacing: 0; */
+}
+.inputField{
+    width:100%;
+    border:none;
+    background:var(--bg-light);
+    border-radius:2px;
+}
+
+.inputFieldContainer{
+    width:65%;
+}
+.registerLogin{
+    width: 75%;
+    position: relative;
+    left:1.5rem;
+}
+.regLeft{
+    font-size: 12px;
+}
+.btnRegister{
+    width: fit-content;
+    height: fit-content;
+    /* position: absolute; */
+    background: #FFFFFF;
+    border: 1.5px solid #000000;
+    border-bottom: 4px solid black;
+    border-right: 4px solid black;
+    }
+@media (max-width:768px){
+    .inputFieldContainer,.formContainer{
+        width:100% !important;
+    }
+    .extraText{
+        width:100% !important;
+    }
+    .btnRegister{
+        width:100% !important;
+    }
+}

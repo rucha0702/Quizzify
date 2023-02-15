@@ -1,0 +1,9 @@
+.submitBtn{
+    /* border: 1px solid red !important; */
+    box-shadow: inset 0 -3em 3em rgba(46, 140, 227, 0.3);
+}
+.submitContainer{
+    position:absolute;
+    bottom: 0;
+    right: 2%;
+}
