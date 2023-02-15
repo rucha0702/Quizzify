@@ -9,21 +9,21 @@ const initialState = {
             return {
                 ...state,
         
-                quizId: data<9?data + 1:9
+                questionCount: data<9?data + 1:9
               };
         case 'DEC_QUESTION_NUM':
             const d = action.payload
             return {
                 ...state,
         
-                quizId: d>0?d - 1:0
+                questionCount: d>0?d - 1:0
               };
         case 'SET_QUESTION_COUNT':
             const c = action.payload
             return {
                 ...state,
         
-                quizId: c
+                questionCount: c
               };
         default:
         return state;
