@@ -1,7 +1,7 @@
 const initialState = {
     questionCount: 0,
   };
-  const QuestionCount = (initialState, action) => {
+  const QuestionCount = (state=initialState, action) => {
     switch (action.type) {
 
         case 'INC_QUESTION_NUM':
