@@ -32,15 +32,15 @@ const AllQuizzesData = () => {
         <div className='d-flex'>
           {
             quizzes?Object.keys(quizzes).map((item,i)=>{
-              if(quizzes[item].details.status==="1")
               return(
+                quizzes[item].details.status==="1"?
                 <div key={i} className={`m-2`}>
                   {/* <div>{quizzes[item].details.title}</div>
                   <div>{item}</div>
                   <div>{quizzes[item].details.year}</div>
                   <div>{quizzes[item].details.duration} minutes</div> */}
                   <QuizDetailsCard quiz={quizzes[item]} id={item}/>
-                </div>
+                </div>:<div></div>
               )
             //  console.log("Status 1",quizzes[item].details)
             }):console.log("error")
