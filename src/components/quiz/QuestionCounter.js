@@ -5,7 +5,7 @@ import styles from './QuestionCounter.module.css';
 
 const QuestionCounter = () => {
     let dispatch = useDispatch();
-    const c = useSelector(state=>state.QuestionCount);
+    const c = useSelector(state=>state.QuestionCount.questionCount);
     return (
       <div className="App">
         <button className={`btn ${styles.navigationBtn}`} onClick={()=>{dispatch(DecQuestionNum(c))}}>Previous</button>
