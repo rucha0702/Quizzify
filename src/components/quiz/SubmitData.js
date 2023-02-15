@@ -7,7 +7,8 @@ const SubmitData = (props) => {
     const quiz = props.quiz;
     const [rerender, setRerender] = useState(false);
     const markedArray = useSelector(state=>state.MarkedArray.markedArray);
-    // const userDetails = useSelector(state=>state.UserDetails.userDetails)
+    const userDetails = useSelector(state=>state.UserDetails.userDetails)
+    const quizId = useSelector(state=>state.SetQuizId.quizId)
     let answers = [];
 
     const handleSubmit = ()=>{
@@ -32,9 +33,9 @@ const SubmitData = (props) => {
     }
     // console.log("Answers: ",answers);
     // console.log("score: ",score);
-    // const {name, email, admissionNumber} = userDetails
-    // console.log("userDetails: ",name, email, admissionNumber);
-    // console.log("Submitted: ",quiz);
+    const {name, email, admissionNumber} = userDetails
+    console.log("userDetails: ",name, email, admissionNumber);
+    console.log("Submitted: ",quiz, quizId);
 
     }
   return (

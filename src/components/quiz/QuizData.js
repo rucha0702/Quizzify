@@ -15,7 +15,7 @@ const QuizData = () => {
   //  let quiz;
   //  let dispatch = useDispatch();
    const count = useSelector(state=>state.QuestionCount);
-   const quizId = useSelector(state=>state.SetQuizId);
+   const quizId = useSelector(state=>state.SetQuizId.quizId);
     const [questions, setQuestions] = useState([])
     useEffect(() => {
         const getQuiz = async (quizId) => {
@@ -28,7 +28,7 @@ const QuizData = () => {
         getQuiz(quizId);
         // console.log("questions:", questions)
         // console.log("quiz id", quizId);
-      }, [])
+      }, [quizId])
   return (
     <div className={`${styles.quizDataContainer} mt-3`}>
         <div>

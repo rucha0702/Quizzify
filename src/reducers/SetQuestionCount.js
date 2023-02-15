@@ -1,10 +1,16 @@
-  
-  const SetQuestionCount = (state = 0, action) => {
+const initialState = {
+  count: 0,
+};
+  const SetQuestionCount = (state = initialState, action) => {
     switch (action.type) {
 
         case 'SET_QUESTION_COUNT':
             const data = action.payload;
-            { return state=data;}
+            return {
+              ...state,
+      
+              count: data,
+            };
         
         default:
         return state;

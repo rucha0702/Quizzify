@@ -6,7 +6,7 @@ import styles from './Sidebar.module.css';
 const Sidebar=()=>{
   return (
     <div className={`${styles.sidebar} d-flex flex-column p-4`}>
-        <div className={`${styles.sidebarTop,styles.head} h2`}>
+        <div className={`${styles.sidebarTop} h2 ${styles.head}`}>
             GDSC
         </div>
         <div className={`${styles.sidebarMid} mt-5 d-flex flex-column`}>

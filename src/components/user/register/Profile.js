@@ -4,7 +4,7 @@ import axios from 'axios';
 import { AddDetails } from '../../../actions/index';
 import { useDispatch, useSelector } from 'react-redux';
 // import Navbar from '../navbar/Navbar';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 // import Logout from '../logout/logout';
 import { useNavigate } from 'react-router-dom';
 import styles from './AdditionalDetails.module.css';
