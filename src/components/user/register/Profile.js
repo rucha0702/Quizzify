@@ -6,7 +6,8 @@ import { useDispatch, useSelector } from 'react-redux';
 // import Navbar from '../navbar/Navbar';
 // import { Link } from 'react-router-dom';
 // import Logout from '../logout/logout';
-import Logout from '../logout/logout';
+// import Logout from '../logout/logout';
+import LoggedNavbar from '../navbar/LoggedNavbar'
 import { useNavigate } from 'react-router-dom';
 import styles from './AdditionalDetails.module.css';
 // import { url } from '../../../utilities';
@@ -101,7 +102,10 @@ const Test = () => {
   };
 
   return (
-    <div className={`${styles.additionalDetails} d-flex flex-column align-items-start`}>
+    <div className={`${styles.additionalDetails} d-flex flex-column align-items-start w-100`}>
+      <div className='w-100'>
+        <LoggedNavbar/>
+      </div>
       {/* <Navbar
         element={
           <Link
@@ -209,7 +213,7 @@ const Test = () => {
           >
             Update
           </button>
-          <div><Logout/></div>
+          {/* <div><Logout/></div> */}
         </form>
         {/* <button
           className='btn btn-success mx-3'

@@ -79,7 +79,7 @@ const QuizDetailsCard = (props) => {
        dispatch(SetLength(quiz.quiz.length));
        dispatch(SetQuizStatus("NS"));
        setRerender(!rerender);
-       navigate('/quiz');
+       navigate('/ins');
        dispatch(MarkedArray(new Array(100).fill(5)))
        dispatch(SetQuestionCount(0))
     }
@@ -100,12 +100,12 @@ const QuizDetailsCard = (props) => {
     //   }, [visible,rerender]);
     
   return (
-    <div onClick={()=>{setQuizId(id)}} className={`${visible===true?"container card":"d-none"}`}>
+    <div onClick={()=>{setQuizId(id)}} style={{cursor:"pointer"}} className={`${visible===true?"container card d-flex flex-column align-items-start p-4":"d-none"}`}>
      {/* <div className='m-2'>{id}</div> */}
      <div>{quiz.details.title}</div>
-     <div>{quiz.details.duration}</div>
-     <div>{quiz.details.date}</div>
-     <div>{quiz.details.year}</div>
+     <div>Duration: {quiz.details.duration}</div>
+     <div>Date: {quiz.details.date}</div>
+     <div>Year: {quiz.details.year}</div>
     </div>
   )
 }

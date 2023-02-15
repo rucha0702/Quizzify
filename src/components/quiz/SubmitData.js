@@ -50,7 +50,7 @@ const SubmitData = (props) => {
             console.log("Submitted")
             const s = "S";
             dispatch(SetQuizStatus(s));
-            setRerender(!rerender)
+            // setRerender(!rerender)
             navigate("/sub")
         }
         else{

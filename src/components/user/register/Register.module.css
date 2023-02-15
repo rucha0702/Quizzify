@@ -45,6 +45,7 @@
     border: 1.5px solid #000000;
     border-bottom: 4px solid black;
     border-right: 4px solid black;
+    cursor: pointer;
     }
 @media (max-width:768px){
     .inputFieldContainer,.formContainer{

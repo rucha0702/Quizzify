@@ -4,9 +4,10 @@ import { useNavigate } from 'react-router-dom';
 import {useEffect} from 'react';
 import AllQuizzesData from './AllQuizzesData';
 // import axios from 'axios';
-import Navbar from '../navbar/Navbar';
+// import Navbar from '../navbar/Navbar';
+import LoggedNavbar from '../navbar/LoggedNavbar';
 // import { Link } from 'react-router-dom';
-import Sidebar from './Sidebar';
+// import Sidebar from './Sidebar';
 import styles from './UserHome.module.css';
 // import { QuizData } from '../../../actions';
 
@@ -92,13 +93,13 @@ const UserHome=()=>{
     // console.log(user);
   }, [userData, navigate]);
   return (
-    <div className={`d-flex w-100`}>
-        <div className={`${styles.sidebar}`}>
+    <div className={`d-flex w-100 flex-column align-items-center`}>
+        {/* <div className={`${styles.sidebar}`}>
             <Sidebar />
-        </div>
+        </div> */}
         <div className={`${styles.dashboard}`}>
-          <Navbar/>
-            <div className='' style={{width:"80%"}}>
+          <LoggedNavbar/>
+            <div className='' style={{width:"100%"}}>
             <div className='h5'>
                 <div className='text-secondary mb-1'>Hey! Welcome back</div>
                 <div className={`${styles.textBold}`}>{userData.name}</div>

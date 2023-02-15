@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+/* html{
+    background:var(--primaryColor);
+} */
+.homepage{
+    background-color: var(--primaryColor);
+    /* min-height: 100vh; */
+   /* position: fixed; */
+   top:0;
+   width:100%;
+}
+.page1{
+   min-height:100vh;
+}
+.page2{
+   height:100vh;
+   background: var(--primaryColor);
+}
+.heading{
+    /* font-weight:var(--extra-bold); */
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    width:50%;  
+}
+.textBold{
+    font-weight: 600;
+}
+.lightText{
+    color:var(--text-light) !important;
+}
+.extraText{
+    width:35%;
+    font-size: 0.8rem;
+}
+/* .btnContainer{
+    background: black;
+    position: relative;
+} */
+.btnRegister{
+width: fit-content;
+height: fit-content;
+/* position: absolute; */
+background: #FFFFFF;
+border: 1.5px solid #000000;
+border-bottom: 4px solid black;
+border-right: 4px solid black;
+}
+
+/* .pg2Left{
+    flex:0.6;
+    background:url('../images/groupx.png') no-repeat center center/cover;
+} */
+.pg2Right{
+    flex: 0.4;
+}
+.light{
+    font-weight: 200;
+    font-size: 1.2rem;
+    font-family: 'Montserrat';
+}
+/* .btnRegister::after{
+    content: '';
+    position: absolute;
+    bottom:-4.5px;
+    left:-2px;
+    height:4px;
+    width:6px;
+    background: white;
+} */
+@media (max-width:768px){
+   .heading{
+       width:100%;
+   }
+    .extraText{
+        width:100% !important;
+    }
+    .btnContainer{
+        width:100% !important;
+    }
+    .btnRegister{
+        width:100% !important;
+    }
+    
+}

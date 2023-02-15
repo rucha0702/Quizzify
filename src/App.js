@@ -7,9 +7,10 @@ import Register from './components/user/register/Register';
 // import AdditionalDetails from './reducers/AdditionalDetails';
 import Profile from './components/user/register/Profile';
 import AllQuizzesData from './components/user/dashboard/AllQuizzesData';
-import LandingPage from './components/landing/LandingPage';
+import LandingPage from './components/landing/HomePage';
 import {Routes, Route} from 'react-router-dom';
 import SubmittedQuiz from './components/quiz/SubmittedQuiz';
+import QuizInstructions from './components/quiz/QuizInstructions';
 import './components/constants.css';
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Route path="/profile" element = {<Profile />} />
         <Route path="/quizzes" element = {<AllQuizzesData />} />
         <Route path="/sub" element = {<SubmittedQuiz />} />
+        <Route path="/ins" element = {<QuizInstructions />} />
         {/* <Route></Route> */}
       </Routes>
       {/* <Routes>

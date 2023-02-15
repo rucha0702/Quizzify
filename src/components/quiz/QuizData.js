@@ -6,10 +6,12 @@ import { getQuizData } from '../../api/quizData';
 import UserQuestion from './UserQuestion';
 import {useNavigate } from 'react-router-dom';
 // import Navbar from '../user/navbar/Navbar';
+import LoggedNavbar from '../user/navbar/LoggedNavbar';
 import QuestionCounter from './QuestionCounter';
 import NavigateQuestions from './NavigateQuestions';
 import SubmitData from './SubmitData';
 import styles from './QuizData.module.css';
+
 // import { useSelector } from 'react-redux';
 
 
@@ -40,15 +42,7 @@ const QuizData = () => {
   return (
     <div className={`${styles.quizDataContainer} mt-3`}>
         <div>
-          {
-            // questions?questions.map((item,i)=>{
-            //   return(
-            //     <div key={i}>
-            //       <UserQuestion question={item} count={i}/>
-            //     </div>
-            //   )
-            // }):""
-          }
+          <LoggedNavbar/>
         </div>
         <div className={`d-flex w-100`}>
           <div className={`${styles.question}`}>

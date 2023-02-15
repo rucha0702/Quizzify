@@ -1,0 +1,32 @@
+.topBar{
+    width:100;
+    background: var(--text-dark);
+}
+.red{
+    background: url('../images/rhombus1.png') no-repeat center center/cover;
+    height:1rem;
+    width: 1rem;
+}
+.yellow{
+    background: url('../images/rhombus2.png') no-repeat center center/cover;
+    height:1rem;
+    width: 1rem;
+}
+.green{
+    background: url('../images/rhombus3.png') no-repeat center center/cover;
+    height:1rem;
+    width: 1rem;
+}
+.image{
+    height:15rem;
+    background: #FFA0B7;
+    /* background: linear-gradient(#FFA0B7, #9198e5), */
+    /* background:linear-gradient(180deg, #FFA0B7 30%, #F3FF69 57.95%); */
+}
+.extended{
+    height:20rem;
+    background:linear-gradient(180deg, #FFA0B7 30%, #F3FF69 57.95%);
+}
+.lightText{
+    color: rgba(255, 255, 255, 0.4);
+}

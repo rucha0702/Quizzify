@@ -28,7 +28,7 @@ const AllQuizzesData = () => {
     }
     getQuizzes();
     // console.log("questions:", questions)
-  }, [])
+  }, [rerender])
   return (
     <div className={`d-flex`}>
         <div className='d-flex'>

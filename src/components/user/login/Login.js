@@ -63,10 +63,12 @@ const Login = () => {
         if (res) {
           console.log('data');
         } else {
+          alert("Enter correct credentials");
           console.log('Network error');
         }
       }
     } catch (error) {
+      alert("Enter correct credentials");
       console.log(error);
     }
     // console.log(user);
@@ -138,7 +140,7 @@ const Login = () => {
             >
               Create a new account
             </Link></div>
-            <button className={`btn ${styles.submit} px-4`} type='submit'>
+            <button className={`${styles.btnLogin} px-4`} type='submit'>
               Log in
             </button>
              </div>

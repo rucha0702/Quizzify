@@ -39,14 +39,14 @@
 .logLeft{
     font-size: 12px;
 }
-.submit{
-        width: fit-content;
-        height: fit-content;
-        /* position: absolute; */
-        background: #FFFFFF;
-        border: 1.5px solid #000000;
-        border-bottom: 4px solid black;
-        border-right: 4px solid black;
+.btnLogin{
+    width: fit-content;
+    height: fit-content;
+    /* position: absolute; */
+    background: #FFFFFF;
+    border: 1.5px solid #000000;
+    border-bottom: 4px solid black;
+    border-right: 4px solid black;
        
 }
 @media (max-width:768px){
