@@ -9,8 +9,6 @@ const QuizDetailsCard = (props) => {
     const [visible, setVisible] = useState(false);
     const [rerender, setRerender] = useState(false);
     // const [currentTime, setCurrentTime] = useState(quiz.details.time)
-    const startTime = new Date(quiz.details.time);
-    const endTime =  new Date(quiz.details.endTime);
     const currentTimeRef = useRef(new Date());
     // const [rerender, setRerender] = useState(false)
     let dispatch = useDispatch();
@@ -29,6 +27,8 @@ const QuizDetailsCard = (props) => {
   }, []);
 
   useEffect(() => {
+    const startTime = new Date(quiz.details.time);
+    const endTime =  new Date(quiz.details.endTime);
     const checkTime = () => {
       const currentTime = currentTimeRef.current;
 
@@ -46,7 +46,7 @@ const QuizDetailsCard = (props) => {
     }, 1000);
 
     return () => clearInterval(timer);
-  }, [startTime, endTime]);
+  }, [quiz.details.time, quiz.details.endTime]);
 
 //   useEffect(() => {
 //     const checkTime = () => {
