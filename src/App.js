@@ -7,6 +7,7 @@ import Register from './components/user/register/Register';
 // import AdditionalDetails from './reducers/AdditionalDetails';
 import Profile from './components/user/register/Profile';
 import AllQuizzesData from './components/user/dashboard/AllQuizzesData';
+import LandingPage from './components/landing/LandingPage';
 import {Routes, Route} from 'react-router-dom';
 import './components/constants.css';
 
@@ -14,6 +15,7 @@ function App() {
   return (
     <div className="App">
       <Routes>
+        <Route path="/" element={<LandingPage/>} />
         <Route path="/quiz" element={<QuizData/>} />
         <Route path="/login" element={<Login/>} />
         <Route path="/register" element={<Register/>} />
