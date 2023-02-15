@@ -33,3 +33,11 @@ export const getQuizData = async (quizId) => {
       console.log("Error while calling quiz details API", error);
     }
   };
+
+  export const submitQuiz = async (quizId, data)=>{
+    try {
+      return await axios.post(`${url2}/${quizId}/results.json`,{data});
+    } catch (error) {
+      console.log("Error while calling quiz results API", error);
+    }
+  }

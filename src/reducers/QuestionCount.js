@@ -26,6 +26,14 @@ const initialState = {
         
                 questionCount: c
               };
+
+        case 'LOGOUT':
+          return {
+            ...state,
+
+            questionCount: 0,
+          };
+        
         default:
         return state;
     }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { LogoutUser } from '../../actions/index';
+import { LogoutUser } from '../../../actions/index';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
@@ -12,7 +12,7 @@ const Logout = () => {
   };
   return (
     <button
-      className={`mx-2 text-dark text-decoration-none btn bg-none`}
+      className={`mx-3 text-light text-decoration-none btn bg-none btn-primary`}
       onClick={handleClick}
     >
       Logout

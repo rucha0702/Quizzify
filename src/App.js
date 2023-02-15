@@ -9,6 +9,7 @@ import Profile from './components/user/register/Profile';
 import AllQuizzesData from './components/user/dashboard/AllQuizzesData';
 import LandingPage from './components/landing/LandingPage';
 import {Routes, Route} from 'react-router-dom';
+import SubmittedQuiz from './components/quiz/SubmittedQuiz';
 import './components/constants.css';
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Route path="/home" element = {<UserHome />} />
         <Route path="/profile" element = {<Profile />} />
         <Route path="/quizzes" element = {<AllQuizzesData />} />
+        <Route path="/sub" element = {<SubmittedQuiz />} />
         {/* <Route></Route> */}
       </Routes>
       {/* <Routes>

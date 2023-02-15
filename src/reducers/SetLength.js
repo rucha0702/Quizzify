@@ -12,6 +12,13 @@ const initialState = {
         
                 quizLength: data,
               };
+
+        case 'LOGOUT':
+            return {
+                ...state,
+
+                quizLength: 0,
+            };
         
         default:
         return state;

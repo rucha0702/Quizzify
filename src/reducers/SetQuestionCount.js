@@ -11,6 +11,13 @@ const initialState = {
       
               count: data,
             };
+
+        case 'LOGOUT':
+          return {
+            ...state,
+
+            count: 0,
+          };
         
         default:
         return state;

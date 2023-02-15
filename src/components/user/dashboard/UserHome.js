@@ -80,8 +80,8 @@ const UserHome=()=>{
 
   useEffect(() => {
     if (!userData.accessToken) {
-      // navigate('/login');
-      console.log("LOGIN")
+      navigate('/login');
+      // console.log("LOGIN")
     }
     // else{
     //   getData();

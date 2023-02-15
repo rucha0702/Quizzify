@@ -4,6 +4,8 @@ import { useSelector} from 'react-redux';
 import { getQuizData } from '../../api/quizData';
 // import { Total } from '../../actions';
 import UserQuestion from './UserQuestion';
+import { Navigate, useNavigate } from 'react-router-dom';
+// import Navbar from '../user/navbar/Navbar';
 import QuestionCounter from './QuestionCounter';
 import NavigateQuestions from './NavigateQuestions';
 import SubmitData from './SubmitData';
@@ -14,10 +16,16 @@ import styles from './QuizData.module.css';
 const QuizData = () => {
   //  let quiz;
   //  let dispatch = useDispatch();
+  let navigate = useNavigate();
    const count = useSelector(state=>state.QuestionCount.questionCount);
    const quizId = useSelector(state=>state.SetQuizId.quizId);
+   const status = useSelector(state=>state.SetQuizStatus.quizStatus);
     const [questions, setQuestions] = useState([])
     useEffect(() => {
+      if(status==="S")
+      {
+         navigate("/home");
+      }
         const getQuiz = async (quizId) => {
           const  {data}  = await getQuizData(quizId);
           // console.log(data);

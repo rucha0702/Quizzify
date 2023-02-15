@@ -11,6 +11,13 @@ const initialState = {
         
                 details: data,
               };
+
+        case 'LOGOUT':
+            return {
+                ...state,
+
+                details: [],
+            };
         
         default:
         return state;

@@ -2,7 +2,7 @@ import React from 'react';
 import { useState, useEffect, useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { SetQuizId, MarkedArray, SetQuestionCount, SetQuizDetails, SetLength } from '../../../actions';
+import { SetQuizId, MarkedArray, SetQuestionCount, SetQuizDetails, SetLength, SetQuizStatus } from '../../../actions';
 
 const QuizDetailsCard = (props) => {
     const {quiz, id} = props;
@@ -77,6 +77,7 @@ const QuizDetailsCard = (props) => {
        dispatch(SetQuizId(i));
        dispatch(SetQuizDetails(quiz.details)) 
        dispatch(SetLength(quiz.quiz.length));
+       dispatch(SetQuizStatus("NS"));
        setRerender(!rerender);
        navigate('/quiz');
        dispatch(MarkedArray(new Array(100).fill(5)))

@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 // import Navbar from '../navbar/Navbar';
 // import { Link } from 'react-router-dom';
 // import Logout from '../logout/logout';
+import Logout from '../logout/logout';
 import { useNavigate } from 'react-router-dom';
 import styles from './AdditionalDetails.module.css';
 // import { url } from '../../../utilities';
@@ -17,9 +18,9 @@ const Test = () => {
 
   let navigate = useNavigate();
 
-  // const additionalDetails = useSelector(
-  //   (state) => state.AdditionalDetails.additionalDetails
-  // );
+  const additionalDetails = useSelector(
+    (state) => state.AdditionalDetails.additionalDetails
+  );
   const userData = useSelector((state) => state.UserDetails.userDetails);
   const [user, setUser] = useState({
     name: userData.name,
@@ -32,26 +33,26 @@ const Test = () => {
       Authorization: `Bearer ${userData.accessToken}`,
     },
   };
-  // const [details, setDetails] = useState({
-  //   phoneNumber: additionalDetails && additionalDetails.phoneNumber ? additionalDetails.phoneNumber : '',
-  //   branch: additionalDetails && additionalDetails.branch ? additionalDetails.branch : '',
-  //   githubProfile: additionalDetails && additionalDetails.githubProfile ? additionalDetails.githubProfile : '',
-  //   hackerRankProfile: additionalDetails && additionalDetails.hackerRankProfile
-  //     ? additionalDetails.hackerRankProfile
-  //     : '',
-  //   codeChefProfile: additionalDetails && additionalDetails.codeChefProfile ? additionalDetails.codeChefProfile : '',
-  //   codeForcesProfile: additionalDetails && additionalDetails.codeForcesProfile
-  //     ? additionalDetails.codeForcesProfile
-  //     : '',
-  // });
   const [details, setDetails] = useState({
-    phoneNumber:"9999999999999",
-    branch: "Information Technology",
-    githubProfile: 'https://github.com',
-    hackerRankProfile: "https://hackerrank.com",
-    codeChefProfile: 'https://codechef.com',
-    codeForcesProfile:'https://codeforces.com',
+    phoneNumber: additionalDetails && additionalDetails.phoneNumber ? additionalDetails.phoneNumber : '',
+    branch: additionalDetails && additionalDetails.branch ? additionalDetails.branch : '',
+    githubProfile: additionalDetails && additionalDetails.githubProfile ? additionalDetails.githubProfile : '',
+    hackerRankProfile: additionalDetails && additionalDetails.hackerRankProfile
+      ? additionalDetails.hackerRankProfile
+      : '',
+    codeChefProfile: additionalDetails && additionalDetails.codeChefProfile ? additionalDetails.codeChefProfile : '',
+    codeForcesProfile: additionalDetails && additionalDetails.codeForcesProfile
+      ? additionalDetails.codeForcesProfile
+      : '',
   });
+  // const [details, setDetails] = useState({
+  //   phoneNumber:"9999999999999",
+  //   branch: "Information Technology",
+  //   githubProfile: 'https://github.com',
+  //   hackerRankProfile: "https://hackerrank.com",
+  //   codeChefProfile: 'https://codechef.com',
+  //   codeForcesProfile:'https://codeforces.com',
+  // });
   useEffect(() => {
     if (!userData.accessToken) {
       navigate('/login');
@@ -82,6 +83,7 @@ const Test = () => {
       // const data = await axios.get('/api/user/myprofile');
       if (data) {
         console.log('updated', data.data);
+        alert("Updated")
       } else {
         console.log('could not update');
       }
@@ -99,7 +101,7 @@ const Test = () => {
   };
 
   return (
-    <div className={`${styles.additionalDetails}`}>
+    <div className={`${styles.additionalDetails} d-flex flex-column align-items-start`}>
       {/* <Navbar
         element={
           <Link
@@ -112,7 +114,7 @@ const Test = () => {
         logout={<Logout />}
       /> */}
       <div className='container my-5'>
-        <form>
+        <form className='d-flex flex-column align-items-start'>
           <div className='h4 mx-3'>Additional Details</div>
           <div className='m-3'>
             <input
@@ -207,6 +209,7 @@ const Test = () => {
           >
             Update
           </button>
+          <div><Logout/></div>
         </form>
         {/* <button
           className='btn btn-success mx-3'

@@ -10,6 +10,12 @@ const initialState = {
           ...state,
           markedArray: data,
         };
+
+      case 'LOGOUT':
+      return {
+        ...state,
+        markedArray: new Array(100).fill(5),
+      };
   
       default:
         return state;

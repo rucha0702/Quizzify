@@ -1,28 +1,28 @@
 const initialState = {
-    quizId: "id",
+    quizStatus: "NS",
   };
 
-  const SetQuizId = (state = initialState, action) => {
+  const SetQuizStatus = (state = initialState, action) => {
     switch (action.type) {
 
-        case 'SET_QUIZ_ID':
+        case 'SET_QUIZ_STATUS':
             const data = action.payload;
             return {
                 ...state,
         
-                quizId: data,
+                quizStatus: data,
               };
 
         case 'LOGOUT':
             return {
                 ...state,
 
-                quizId: "id",
+                quizStatus: "NS",
             };
         
         default:
         return state;
     }
   };
-  export default SetQuizId;
+  export default SetQuizStatus;
   

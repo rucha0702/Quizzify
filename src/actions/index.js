@@ -38,6 +38,12 @@ export const SetLength = (data) => {
     payload:data
   };
 };
+export const SetQuizStatus = (data) => {
+  return {
+    type: 'SET_QUIZ_STATUS',
+    payload:data
+  };
+};
 
 //For incrementing the quiz question counter
 export const IncQuestionNum = (data, length) => {

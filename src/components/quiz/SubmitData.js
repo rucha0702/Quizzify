@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
 import styles from './SubmitData.module.css';
-import { useSelector } from 'react-redux';
+import { submitQuiz } from '../../api/quizData';
+import { SetQuizStatus } from '../../actions';
+import { useSelector, useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 const SubmitData = (props) => {
     let score = 0;
+    let dispatch = useDispatch();
+    let navigate = useNavigate();
     const quiz = props.quiz;
     const [rerender, setRerender] = useState(false);
     const markedArray = useSelector(state=>state.MarkedArray.markedArray);
@@ -34,8 +39,25 @@ const SubmitData = (props) => {
     // console.log("Answers: ",answers);
     // console.log("score: ",score);
     const {name, email, admissionNumber} = userDetails
-    console.log("userDetails: ",name, email, admissionNumber);
-    console.log("Submitted: ",quiz, quizId);
+    // console.log("userDetails: ",name, email, admissionNumber);
+    // console.log("Submitted: ",quiz, quizId);
+
+    const SubmitQuiz = async () => {
+        const  res  = await submitQuiz(quizId, {name,email,admissionNumber,score,answers});
+        // console.log(data);
+        if(res)
+        { 
+            console.log("Submitted")
+            const s = "S";
+            dispatch(SetQuizStatus(s));
+            setRerender(!rerender)
+            navigate("/sub")
+        }
+        else{
+            console.log("not submitted")
+        }
+      }
+      SubmitQuiz();
 
     }
   return (
