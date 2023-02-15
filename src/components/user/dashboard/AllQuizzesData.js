@@ -8,6 +8,7 @@ import QuizDetailsCard from './QuizDetailsCard';
 
 const AllQuizzesData = () => {
    const [quizzes, setQuizzes] = useState([])
+   const [rerender, setRerender] = useState(false);
   useEffect(() => {
     const getQuizzes = async () => {
       const  {data}  = await getAllQuizes();
@@ -17,7 +18,8 @@ const AllQuizzesData = () => {
       data?Object.keys(data).map((item)=>{
         if(data[item].details.status==="1")
         // setQuizzes()
-       console.log("Status 1")
+      //  console.log("Status 1")
+      setRerender(!rerender);
        return(item);
       //  console.log("Status 1",data[item].details)
       }):console.log("error")
