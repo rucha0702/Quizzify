@@ -22,9 +22,14 @@ const QuizData = () => {
    const count = useSelector(state=>state.QuestionCount.questionCount);
    const quizId = useSelector(state=>state.SetQuizId.quizId);
    const status = useSelector(state=>state.SetQuizStatus.quizStatus);
+   const userData = useSelector((state) => state.UserDetails.userDetails);
     const [questions, setQuestions] = useState([])
     useEffect(() => {
-      if(status==="S")
+      if (!userData.accessToken) {
+        navigate('/login');
+        // console.log("LOGIN")
+      }
+      else if(status==="S")
       {
          navigate("/home");
       }

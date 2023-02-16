@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 // import { useDispatch } from 'react-redux';
 // import { UserDetails } from '../../../actions';
 // import Navbar from '../navbar/Navbar';
+import Loader from '../login/Loader';
 import styles from './Register.module.css';
 import { url } from '../../utilities';
 import axios from 'axios';
@@ -16,6 +17,7 @@ const Register = () => {
   // const additionalDetails = useSelector(
   //   (state) => state.AdditionalDetails.additionalDetails
   // );
+  const [isLoading, setIsLoading] = useState(false);
   const [user, setUser] = useState({
     name: '',
     email: '',
@@ -30,6 +32,7 @@ const Register = () => {
     setUser({ ...user, [name]: value });
   };
   const userRegister = async (e) => {
+    setIsLoading(true)
     e.preventDefault();
     const { name, email, password, admissionNumber } = user;
     if (name && email && password && admissionNumber) {
@@ -43,6 +46,7 @@ const Register = () => {
       // console.log(res.data);
       if (res.data.success === true) {
         setMessage('Registered successfully, proceed to login.');
+        setIsLoading(false)
       }
       // const data = await res.json();
       // if (data) {
@@ -56,6 +60,7 @@ const Register = () => {
       //   });
     } else {
       alert('Invalid user');
+      setIsLoading(false)
     }
   };
   return (
@@ -71,6 +76,7 @@ const Register = () => {
         }
       /> */}
       <div className=' mb-5'></div>
+      {isLoading && <Loader/>}
       <div
         className={`container my-4 w-100 d-flex flex-column align-items-center`}
       >
@@ -84,9 +90,12 @@ const Register = () => {
           events
         </div>
         <div className={`text-dark`}>{message}</div>
+        
+        
+        <div className={`w-50 ${styles.formOuter}`}>
         <form
           onSubmit={userRegister} 
-          className={`container d-flex flex-column align-items-center w-50 ${styles.formContainer}`}
+          className={`container d-flex flex-column align-items-center w-100 ${styles.formContainer} relative`}
         >
           <div className={`m-2 ${styles.inputFieldContainer}`}>
             <input
@@ -128,9 +137,9 @@ const Register = () => {
               onChange={handleChange}
             />
           </div>
-          <div className={`d-flex ${styles.registerLogin} align-items-center justify-content-between`}>
+          <div className={`d-flex ${styles.registerLogin} align-items-center justify-content-between ${styles.bottomNav}`}>
             <div className={`${styles.regLeft}`}>
-              <span className='mx-1'>or</span>
+              <span className='px-1'>or</span>
           <Link
             to='/login'
             className={`text-decoration-none text-dark`}
@@ -144,7 +153,7 @@ const Register = () => {
         >
           <div
             onClick={userRegister}
-            className={` text-decoration-none text-center p-1 px-3 mt-1 text-dark ${styles.btnRegister}`}
+            className={` text-decoration-none text-center p-1 px-3 mt-1 text-dark ${styles.btnRegister} w-100`}
             type=''
           >
             Sign Up
@@ -154,6 +163,7 @@ const Register = () => {
           </div>
 
         </form>
+        </div>
         {/* <AdditionalDetails /> */}
         {/* <button
           className='btn'

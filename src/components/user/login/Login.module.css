@@ -39,18 +39,18 @@
 .logLeft{
     font-size: 12px;
 }
-.btnLogin{
+.submit{
     width: fit-content;
     height: fit-content;
     /* position: absolute; */
-    background: #FFFFFF;
-    border: 1.5px solid #000000;
-    border-bottom: 4px solid black;
-    border-right: 4px solid black;
+    background: #101010;
+    border: 1.5px solid #101010;
+    border-bottom: 4px solid rgb(236, 230, 230);
+    border-right: 4px solid rgb(222, 219, 219);
        
 }
 @media (max-width:768px){
-    .inputFieldContainer,.formContainer{
+    .inputFieldContainer,.formContainer,.formOuter{
         width:100% !important;
     }
     .extraText{
@@ -58,5 +58,13 @@
     }
     .btnRegister{
         width:100% !important;
+    }
+    .formOuter{
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+    .bottomNav{
+        width: 100%;
+        margin-top: 10%;
     }
 }

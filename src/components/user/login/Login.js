@@ -9,9 +9,11 @@ import { UserDetails, AddDetails } from '../../../actions/index';
 import styles from './Login.module.css';
 // import { elements } from '../links/links';
 import { url } from '../../utilities';
+import Loader from './Loader';
 
 const Login = () => {
   let navigate = useNavigate();
+  const [isLoading, setIsLoading] = useState(false);
   // const [sendElement, setSendElement] = useState('');
   //   const url = 'https://onerecruit.herokuapp.com';
   //   const additionalDetails = useSelector(state=>state.AdditionalDetails.additionalDetails)
@@ -37,6 +39,7 @@ const Login = () => {
   //   const userInfo = localData ? JSON.parse(localData) : null;
 
   const handleSubmit = async (e) => {
+    setIsLoading(true);
     const { email, password } = user;
     e.preventDefault();
     try {
@@ -50,6 +53,7 @@ const Login = () => {
         // const user = res.data;
         dispatch(UserDetails(res.data));
         dispatch(AddDetails(res.data.additionalDetails));
+        setIsLoading(false);
 
         // localStorage.setItem('userinfo', JSON.stringify(res.data));
         // console.log('response present');
@@ -58,18 +62,22 @@ const Login = () => {
           navigate('/home', { replace: true });
         } else {
           alert('wrong credentials');
+          setIsLoading(false);
         }
       } else {
         if (res) {
           console.log('data');
+          setIsLoading(false)
         } else {
           alert("Enter correct credentials");
           console.log('Network error');
+          setIsLoading(false);
         }
       }
     } catch (error) {
       alert("Enter correct credentials");
       console.log(error);
+      setIsLoading(false);
     }
     // console.log(user);
   };
@@ -93,6 +101,7 @@ const Login = () => {
         }
       /> */}
       <div className=' mb-5'></div>
+      {isLoading && <Loader />}
       <div
         className={`container my-4 ${styles.loginContainer} w-100 d-flex flex-column align-items-center`}
       >
@@ -103,9 +112,9 @@ const Login = () => {
           } text-center m-2 mb-4`}
         >
           Quickly login to your account and enjoy the full experience of
-          ProductName
+          Rapid Recruit
         </div>
-        <div className={`w-100`}>
+        <div className={`w-100 ${styles.formOuter}`}>
           <form
             onSubmit={handleSubmit}
             className={`container d-flex flex-column align-items-center w-50 ${styles.formContainer}`}

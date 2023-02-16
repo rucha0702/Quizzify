@@ -1,0 +1,25 @@
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .circular {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 3px solid #ccc;
+    border-top-color: #333;
+    animation: spin 0.8s ease-in-out infinite;
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
