@@ -92,7 +92,7 @@ const Register = () => {
         <div className={`text-dark`}>{message}</div>
         
         
-        <div className={`w-50 ${styles.formOuter}`}>
+        <div className={`${styles.formOuter}`}>
         <form
           onSubmit={userRegister} 
           className={`container d-flex flex-column align-items-center w-100 ${styles.formContainer} relative`}

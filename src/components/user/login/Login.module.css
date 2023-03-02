@@ -49,6 +49,9 @@
     border-right: 4px solid rgb(222, 219, 219);
        
 }
+.formContainer{
+    width: 50%;
+}
 @media (max-width:768px){
     .inputFieldContainer,.formContainer,.formOuter{
         width:100% !important;

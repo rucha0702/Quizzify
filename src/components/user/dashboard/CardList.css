@@ -9,7 +9,7 @@
   .card {
       overflow: hidden;
       position: relative;
-      width: 100%;
+      width: 50%;
       display: flex;
       justify-content: center;
       border: none;
@@ -19,21 +19,6 @@
       box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
       margin: 20px 0;
     width: 80%;
-  }
-  .card::before {
-    content: "";
-    display: block;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    transition: all 0.3s ease-in-out;
-    width: 100%;
-    z-index: -1;
-  }
-  
-  .card:hover::before {
-    transform: translate3d(0, 0, 0);
   }
   
   .card-title {
@@ -69,3 +54,15 @@
     background-color: rgba(46, 204, 64,0.8);
   }
   
+  @media only screen and (max-width: 768px) {
+    .card-list{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .card-body{
+        width: 100%;
+    }
+    .card{
+        width: 100%;
+    }
+  }

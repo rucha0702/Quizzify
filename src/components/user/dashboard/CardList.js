@@ -3,7 +3,7 @@ import "./CardList.css";
 
 const Card = ({ title, description, color }) => {
   return (
-    <div className={`card bg-${color}  w-50 d-flex justify-content-center py-3`}>
+    <div className={`card bg-${color} d-flex justify-content-center py-3 border-0`}>
       <div className="card-body m-auto">
         <div>
 

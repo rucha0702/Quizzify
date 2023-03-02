@@ -1,5 +1,6 @@
 .navContainer{
     background: var(--lightGreen);
+    width: 50%;
     /* position: absolute; */
 
 }
@@ -18,3 +19,9 @@
 .logout{
     cursor: pointer;
 }
+
+@media only screen and (max-width: 768px) {
+    .navContainer{
+        width: 90% !important;
+    }
+  }

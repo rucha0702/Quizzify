@@ -117,7 +117,7 @@ const Login = () => {
         <div className={`w-100 ${styles.formOuter}`}>
           <form
             onSubmit={handleSubmit}
-            className={`container d-flex flex-column align-items-center w-50 ${styles.formContainer}`}
+            className={`container d-flex flex-column align-items-center ${styles.formContainer}`}
           >
             <div className={`m-2 ${styles.inputFieldContainer}`}>
               <input

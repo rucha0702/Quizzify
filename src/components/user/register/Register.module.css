@@ -47,6 +47,9 @@
     border-right: 4px solid black;
     cursor: pointer;
     }
+.formOuter{
+    width: 50%;
+}
 @media (max-width:768px){
     .inputFieldContainer,.formOuter, .bottomNav, .formContainer{
         width:100% !important;
