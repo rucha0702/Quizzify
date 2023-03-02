@@ -11,6 +11,7 @@ import LandingPage from './components/landing/HomePage';
 import {Routes, Route} from 'react-router-dom';
 import SubmittedQuiz from './components/quiz/SubmittedQuiz';
 import QuizInstructions from './components/quiz/QuizInstructions';
+import UserQuizzes from './components/user/dashboard/UserQuizzes';
 import './components/constants.css';
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
         <Route path="/quizzes" element = {<AllQuizzesData />} />
         <Route path="/sub" element = {<SubmittedQuiz />} />
         <Route path="/ins" element = {<QuizInstructions />} />
+        <Route path="/uq" element = {<UserQuizzes />} />
         {/* <Route></Route> */}
       </Routes>
       {/* <Routes>

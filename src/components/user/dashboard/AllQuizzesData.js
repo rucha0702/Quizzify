@@ -19,7 +19,7 @@ const AllQuizzesData = () => {
         if(data[item].details.status==="1")
         // setQuizzes()
       //  console.log("Status 1")
-      setRerender(!rerender);
+      setRerender(true);
        return(item);
       //  console.log("Status 1",data[item].details)
       }):console.log("error")

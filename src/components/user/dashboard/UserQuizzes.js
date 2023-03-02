@@ -2,17 +2,17 @@ import React from 'react';
 import {useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import {useEffect} from 'react';
-// import AllQuizzesData from './AllQuizzesData';
-import CardList from './CardList';
+import AllQuizzesData from './AllQuizzesData';
+// import CardList from './CardList';
 // import axios from 'axios';
 // import Navbar from '../navbar/Navbar';
 import LoggedNavbar from '../navbar/LoggedNavbar';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 // import Sidebar from './Sidebar';
 import styles from './UserHome.module.css';
 // import { QuizData } from '../../../actions';
 
-const UserHome=()=>{
+const UserQuizzes=()=>{
 
   let navigate = useNavigate();
   // const [data, setData] = useState([]);
@@ -106,11 +106,8 @@ const UserHome=()=>{
                 <div className={`${styles.textBold}`}>{userData.name}</div>
             </div>
             <hr></hr>
-            {/* <div>
-              <AllQuizzesData />
-            </div> */}
             <div>
-              <Link to="/uq">Go to Quiz</Link>
+              <AllQuizzesData />
             </div>
             {/* <div className={`${styles.quizCardsContainer} d-flex`}>
              
@@ -128,11 +125,10 @@ const UserHome=()=>{
           }
             
             </div> */}
-            <CardList />
             </div>
         </div>
     </div>
   )
 }
 
-export default UserHome
+export default UserQuizzes
