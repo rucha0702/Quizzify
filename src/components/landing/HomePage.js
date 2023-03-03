@@ -6,7 +6,8 @@ import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import Navbar from '../user/navbar/Navbar';
 // import Footer from '../footer/Footer';
-// import HomeImage from './HomeImage';
+import HomeImage from './HomeImage';
+// import Carousel from './Carousel';
 // import { elements } from '../links/links';
 // import axios from 'axios';
 
@@ -99,14 +100,14 @@ const HomePage = () => {
            
           </Link>
         </div>
-        {/* <HomeImage /> */}
+        <HomeImage />
       </div>
       <div>
       </div>
         <div className={`${styles.page2} d-flex w-100`}>
          <div className={`${styles.pg2Left} d-flex w-100 justify-content-center align-items-center`}>left</div>
          <div className={`${styles.pg2Right} d-flex flex-column justify-content-between p-2 py-5 my-4`}>
-          <div className={`d-flex flex-column`}>
+          <div className={`d-flex flex-column align-items-start`}>
             <div className={`my-2 ${styles.light}`}>Register</div>
             <div className={`my-2 ${styles.light}`}>Screening Process</div>
             <div className={`my-2 ${styles.light}`}>Task Submission</div>
@@ -115,6 +116,9 @@ const HomePage = () => {
           <div className={`w-50 ${styles.textBold}`}>and become a part of the most amazing society<span className='text-danger mx-1'>❤</span> </div>
          </div>
         </div>
+        {/* <div>
+          <Carousel/>
+        </div> */}
         {/* <div className={`styles.footer w-100`}>
           <Footer/>
         </div> */}

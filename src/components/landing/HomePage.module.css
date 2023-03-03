@@ -9,7 +9,11 @@
    /* position: fixed; */
    top:0;
    width:100%;
+   margin: 0;
+   padding: 0;
+ 
 }
+
 .page1{
    min-height:100vh;
 }
@@ -48,7 +52,7 @@ border-right: 4px solid black;
 
 .pg2Left{
     flex:0.6;
-    /* background:url('../images/groupx.png') no-repeat center center/cover; */
+    background:url('../../images/groupx.png') no-repeat center center/cover;
 }
 .pg2Right{
     flex: 0.4;

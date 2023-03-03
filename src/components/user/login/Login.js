@@ -114,7 +114,7 @@ const Login = () => {
           Quickly login to your account and enjoy the full experience of
           Rapid Recruit
         </div>
-        <div className={`w-100 ${styles.formOuter}`}>
+        <div className={`${styles.formOuter}`}>
           <form
             onSubmit={handleSubmit}
             className={`container d-flex flex-column align-items-center ${styles.formContainer}`}

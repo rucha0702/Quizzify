@@ -49,7 +49,7 @@
     border-right: 4px solid rgb(222, 219, 219);
        
 }
-.formContainer{
+.formOuter{
     width: 50%;
 }
 @media (max-width:768px){

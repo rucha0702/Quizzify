@@ -6,7 +6,7 @@ import styles from './Navbar.module.css';
 function Navbar(props) {
   return (
     
-      <div className={`${styles.navContainer} px-2 my-2 w-50 mx-auto my-2 d-flex justify-content-between align-items-center rounded-pill`}>
+      <div className={`${styles.navContainer} px-2 py-2 w-50 mx-auto my-2 d-flex justify-content-between align-items-center rounded-pill`}>
         <div className='d-flex' style={{cursor:"pointer"}}>
         <div className={`${styles.navbarTitle} mx-2`}>
         </div>

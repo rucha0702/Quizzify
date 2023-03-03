@@ -3,30 +3,48 @@
     background: var(--text-dark);
 }
 .red{
-    background: url('../images/rhombus1.png') no-repeat center center/cover;
+    background: url('../../images/rhombus1.png') no-repeat center center/cover;
     height:1rem;
     width: 1rem;
 }
 .yellow{
-    background: url('../images/rhombus2.png') no-repeat center center/cover;
+    background: url('../../images/rhombus2.png') no-repeat center center/cover;
     height:1rem;
     width: 1rem;
 }
 .green{
-    background: url('../images/rhombus3.png') no-repeat center center/cover;
+    background: url('../../images/rhombus3.png') no-repeat center center/cover;
     height:1rem;
     width: 1rem;
 }
 .image{
-    height:15rem;
-    background: #FFA0B7;
+    height:35rem;
+    background: url('../../images/gdscus.png') no-repeat center center/cover;;
+    /* background: #FFA0B7; */
     /* background: linear-gradient(#FFA0B7, #9198e5), */
     /* background:linear-gradient(180deg, #FFA0B7 30%, #F3FF69 57.95%); */
+    border-image: linear-gradient(to bottom, #f00, #00f) 1; /* Apply the gradient to the border */
 }
-.extended{
+.image {
+    position: relative; /* Make the container position relative so that the pseudo-element can be positioned absolutely inside it */
+  }
+  
+  .image::after {
+    content: ""; /* Add a content value so that the pseudo-element shows up */
+    position: absolute; /* Make the pseudo-element position absolute so that it covers the entire container */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent 0%, rgb(243, 255, 105,0.9) 100%); 
+    /* Set a linear gradient background that fades to transparent at the top and opaque at the bottom */
+    pointer-events: none; /* Make the pseudo-element ignore pointer events so that the image can be clicked or interacted with */
+  }
+/* .extended{
     height:20rem;
-    background:linear-gradient(180deg, #FFA0B7 30%, #F3FF69 57.95%);
-}
+    background: url('../../images/gdscus.png') no-repeat center center/cover;;
+    background:linear-gradient(180deg, #FFA0B7 30%, #F3FF69 57.95%) transparent;
+} */
 .lightText{
     color: rgba(255, 255, 255, 0.4);
 }
