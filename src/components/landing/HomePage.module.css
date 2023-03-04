@@ -7,6 +7,7 @@
     background-color: var(--primaryColor);
     /* min-height: 100vh; */
    /* position: fixed; */
+   position: absolute;
    top:0;
    width:100%;
    margin: 0;
@@ -28,6 +29,8 @@
 }
 .textBold{
     font-weight: 600;
+    width: 50%;
+    text-align: left;
 }
 .lightText{
     color:var(--text-light) !important;
@@ -71,6 +74,9 @@ border-right: 4px solid black;
     width:6px;
     background: white;
 } */
+.rightContent{
+    align-items: start;
+}
 @media (max-width:768px){
    .heading{
        width:100%;
@@ -84,5 +90,15 @@ border-right: 4px solid black;
     .btnRegister{
         width:100% !important;
     }
-    
+    .page2{
+        flex-direction: column;
+    }
+    .rightContent{
+        /* align-items: center; */
+        padding: 1rem;
+    }
+    .textBold{
+        width: 100%;
+        text-align: center;
+    }
 }

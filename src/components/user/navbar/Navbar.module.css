@@ -1,6 +1,7 @@
 .navContainer{
     background: var(--bg-light);
     /* position: absolute; */
+    width: 50%;
 
 }
 
@@ -18,3 +19,8 @@
 .logout{
     cursor: pointer;
 }
+@media only screen and (max-width: 768px) {
+    .navContainer{
+        width: 90% !important;
+    }
+  }

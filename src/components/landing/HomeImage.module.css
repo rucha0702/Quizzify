@@ -36,7 +36,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, transparent 0%, rgb(243, 255, 105,0.9) 100%); 
+    /* background: linear-gradient(to bottom, transparent 0%, rgb(243, 255, 105,0.9) 100%);  */
     /* Set a linear gradient background that fades to transparent at the top and opaque at the bottom */
     pointer-events: none; /* Make the pseudo-element ignore pointer events so that the image can be clicked or interacted with */
   }

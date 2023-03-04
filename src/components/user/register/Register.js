@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 // import axios from 'axios';
 // import AdditionalDetails from './AdditionalDetails';
 // import { useDispatch } from 'react-redux';
@@ -17,6 +18,7 @@ const Register = () => {
   // const additionalDetails = useSelector(
   //   (state) => state.AdditionalDetails.additionalDetails
   // );
+  let navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(false);
   const [user, setUser] = useState({
     name: '',
@@ -47,6 +49,8 @@ const Register = () => {
       if (res.data.success === true) {
         setMessage('Registered successfully, proceed to login.');
         setIsLoading(false)
+        alert("Registered succesfully");
+        navigate('/login')
       }
       // const data = await res.json();
       // if (data) {
