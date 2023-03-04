@@ -1,4 +1,5 @@
 import React from 'react';
+import validator from 'validator'
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
@@ -20,6 +21,7 @@ const Register = () => {
   // );
   let navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(false);
+  // const [emailVal, setEmailVal] = useState('');
   const [user, setUser] = useState({
     name: '',
     email: '',
@@ -27,6 +29,17 @@ const Register = () => {
     admissionNumber: '',
   });
   const [message, setMessage] = useState('');
+
+  const [emailError, setEmailError] = useState('')
+  const validateEmail = (e) => {
+    var email = e.target.value
+  
+    if (validator.isEmail(email)) {
+      setEmailError('Valid Email :)')
+    } else {
+      setEmailError('Enter valid Email!')
+    }
+  }
   const handleChange = (e) => {
     e.preventDefault();
     const name = e.target.name;
@@ -37,7 +50,7 @@ const Register = () => {
     setIsLoading(true)
     e.preventDefault();
     const { name, email, password, admissionNumber } = user;
-    if (name && email && password && admissionNumber) {
+    if (name && email && password && admissionNumber && emailError==="Valid Email :)") {
       // console.log('User is:', user);
       const res = await axios.post(`${url}/api/auth/register`, {
         name,
@@ -112,13 +125,17 @@ const Register = () => {
             />
           </div>
           <div className={`m-2 ${styles.inputFieldContainer}`}>
+          <span className={`${emailError==="Valid Email :)"?'d-none':""}`} style={{
+          fontWeight: '',
+          color: 'rgb(214, 70, 70)',
+        }}>{emailError}</span>
             <input
               className={`p-2 ${styles.inputField} border-none`}
               type='email'
               name='email'
               value={user.email}
               placeholder='Email'
-              onChange={handleChange}
+              onChange={(e)=>{validateEmail(e);handleChange(e)}}
             />
           </div>
           <div className={`m-2 ${styles.inputFieldContainer}`}>
