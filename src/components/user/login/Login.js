@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { UserDetails, AddDetails } from '../../../actions/index';
-// import Navbar from '../navbar/Navbar';
+import Navbar from '../navbar/Navbar';
 import styles from './Login.module.css';
 // import { elements } from '../links/links';
 import { url } from '../../utilities';
@@ -90,7 +90,7 @@ const Login = () => {
   };
   return (
     <div className={`${styles.loginPage}`}>
-      {/* <Navbar
+      <Navbar
         element={
           <Link
             className={`mx-2 text-dark text-decoration-none btn bg-none`}
@@ -99,7 +99,7 @@ const Login = () => {
             Home
           </Link>
         }
-      /> */}
+      />
       <div className=' mb-5'></div>
       {isLoading && <Loader />}
       <div

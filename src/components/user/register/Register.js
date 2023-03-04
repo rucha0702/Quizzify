@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 // import AdditionalDetails from './AdditionalDetails';
 // import { useDispatch } from 'react-redux';
 // import { UserDetails } from '../../../actions';
-// import Navbar from '../navbar/Navbar';
+import Navbar from '../navbar/Navbar';
 import Loader from '../login/Loader';
 import styles from './Register.module.css';
 import { url } from '../../utilities';
@@ -69,7 +69,7 @@ const Register = () => {
   };
   return (
     <div className={`${styles.registerContainer}`}>
-      {/* <Navbar
+      <Navbar
         element={
           <Link
             className={`mx-2 text-dark text-decoration-none btn bg-none`}
@@ -78,7 +78,7 @@ const Register = () => {
             Home
           </Link>
         }
-      /> */}
+      />
       <div className=' mb-5'></div>
       {isLoading && <Loader/>}
       <div
