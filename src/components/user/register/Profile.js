@@ -118,23 +118,16 @@ const Test = () => {
         logout={<Logout />}
       /> */}
       <div className='container my-5'>
-        <form className='d-flex flex-column align-items-start'>
-          <div className='h4 mx-3'>Additional Details</div>
-          <div className='m-3'>
+        <form className={`d-flex flex-column align-items-start ${styles.addDetails}`}>
+          <div className={`h4 mx-4`}>Edit Profile</div>
+          <div className={`d-flex m-2 ${styles.pair}`}>
+          <div className='mx-3'>
+          <label className=''>Name</label> <br></br>
             <input
               type='text'
               name='name'
               value={user.name}
               placeholder='Name'
-              onChange={handleChange}
-            />
-          </div>
-          <div className='mx-3'>
-            <label>Admission Number</label> <br></br>
-            <input
-              type='text'
-              name='admissionNumber'
-              value={user.admissionNumber}
               onChange={handleChange}
             />
           </div>
@@ -147,7 +140,17 @@ const Test = () => {
               onChange={handleChange}
             />
           </div>
-          <div className='d-flex'>
+          </div>
+          <div className={`d-flex m-2  ${styles.pair}`}>
+          <div className='mx-3'>
+            <label>Admission Number</label> <br></br>
+            <input
+              type='text'
+              name='admissionNumber'
+              value={user.admissionNumber}
+              onChange={handleChange}
+            />
+          </div>
             <div className='mx-3'>
               <label>Branch</label> <br></br>
               <input
@@ -158,7 +161,7 @@ const Test = () => {
               />
             </div>
           </div>
-          <div className='d-flex'>
+          <div className={`d-flex m-2  ${styles.pair}`}>
             <div className='mx-3'>
               <label>GitHub Profile</label> <br></br>
               <input
@@ -178,9 +181,9 @@ const Test = () => {
               />
             </div>
           </div>
-          <div className='d-flex'>
+          <div className={`d-flex m-2  ${styles.pair}`}>
             <div className='mx-3'>
-              <label>CodeChef Profile</label> <br></br>
+              <label>CodeChef/CodeForces Profile</label> <br></br>
               <input
                 type='text'
                 name='codeChefProfile'
@@ -209,7 +212,7 @@ const Test = () => {
               dispatch(AddDetails(details));
               updateUserInfo();
             }}
-            className='m-3 btn btn-success'
+            className='m-2 mx-4 btn btn-success'
           >
             Update
           </button>

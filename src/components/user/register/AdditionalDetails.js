@@ -124,20 +124,20 @@ const AdditionalDetails = () => {
             />
           </div>
           <div className='mx-3'>
-            <label>Admission Number</label> <br></br>
-            <input
-              type='text'
-              name='admissionNumber'
-              value={user.admissionNumber}
-              onChange={handleChange}
-            />
-          </div>
-          <div className='mx-3'>
             <label>Contact Number</label> <br></br>
             <input
               type='number'
               name='phoneNumber'
               value={details.phoneNumber}
+              onChange={handleChange}
+            />
+          </div>
+          <div className='mx-3'>
+            <label>Admission Number</label> <br></br>
+            <input
+              type='text'
+              name='admissionNumber'
+              value={user.admissionNumber}
               onChange={handleChange}
             />
           </div>

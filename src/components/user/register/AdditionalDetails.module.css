@@ -1,3 +1,12 @@
 /* .additionalDetails{
     background: var(--primaryColor);
 } */
+.addDetails{
+    text-align: start;
+    width: 50%;
+    /* background: green; */
+}
+.pair{
+    width: 100%;
+    justify-content: space-between;
+}
