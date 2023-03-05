@@ -7,11 +7,12 @@ import SetQuizDetails from './SetQuizDetails';
 import SetQuestionCount from './SetQuestionCount';
 import SetLength from './SetLength';
 import SetQuizStatus from './SetQuizStatus';
+import SetTimer from './SetTimer';
 import { combineReducers } from 'redux';
 
 
 const rootReducer = combineReducers({
-  QuestionCount, MarkedArray, UserDetails, AdditionalDetails, SetQuizId, SetQuizDetails, SetQuestionCount, SetLength, SetQuizStatus
+  QuestionCount, MarkedArray, UserDetails, AdditionalDetails, SetQuizId, SetQuizDetails, SetQuestionCount, SetLength, SetQuizStatus, SetTimer
 });
 
 export default rootReducer;

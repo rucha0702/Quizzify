@@ -44,6 +44,12 @@ export const SetQuizStatus = (data) => {
     payload:data
   };
 };
+export const SetTimer = (data) => {
+  return {
+    type: 'SET_TIMER',
+    payload:data
+  };
+};
 
 //For incrementing the quiz question counter
 export const IncQuestionNum = (data, length) => {

@@ -9,8 +9,8 @@ const QuestionCounter = () => {
     const length = useSelector(state=>state.SetLength.quizLength);
     return (
       <div className="App">
-        <button className={`btn ${styles.navigationBtn} mx-1`} onClick={()=>{dispatch(DecQuestionNum(c, length))}}>Previous</button>
-        <button className={`btn ${styles.navigationBtn} mx-1`} onClick={()=>{dispatch(IncQuestionNum(c, length))}}>Next</button>
+        <button className={`btn ${styles.navigationBtn}`} onClick={()=>{dispatch(DecQuestionNum(c, length))}}>Previous</button>
+        <button className={`btn ${styles.navigationBtn}`} onClick={()=>{dispatch(IncQuestionNum(c, length))}}>Next</button>
         {/* <div>{c}</div> */}
       </div>
     );

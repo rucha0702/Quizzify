@@ -10,6 +10,7 @@ import LoggedNavbar from '../user/navbar/LoggedNavbar';
 import QuestionCounter from './QuestionCounter';
 import NavigateQuestions from './NavigateQuestions';
 import SubmitData from './SubmitData';
+import Time from './Time';
 import styles from './QuizData.module.css';
 
 // import { useSelector } from 'react-redux';
@@ -49,6 +50,7 @@ const QuizData = () => {
         <div>
           <LoggedNavbar/>
         </div>
+        <div><Time/></div>
         <div className={`d-flex w-100`}>
           <div className={`${styles.question}`}>
 

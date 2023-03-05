@@ -1,5 +1,5 @@
 import React from 'react';
-import {useState, useEffect} from 'react';
+import {useState} from 'react';
 import { useDispatch,useSelector } from 'react-redux';
 // import { QuizData } from '../../../actions';
 import { MarkedArray } from '../../actions';
@@ -21,9 +21,11 @@ const UserQuestion=(props)=>{
         dispatch(MarkedArray(markedArray))
         setRerender(!rerender);
     }
-    useEffect(()=>{
-        console.log("first")
-    },[markedArray])
+    // let a="Time";
+    // useEffect(()=>{
+    //     a ="";
+    //     // console.log("first")
+    // },[markedArray])
   return (
     
         <div style={{height:"55vh"}} className={`d-flex flex-column align-items-end justify-content-between m-5 ${styles.questionContainer}border rounded`}>
@@ -53,7 +55,7 @@ const UserQuestion=(props)=>{
                         )
                     })}
                  </div>
-                 {/* <div>{ncount}</div> */}
+                 {/* <div>{a}</div> */}
                 </div>
     
   )

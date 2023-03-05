@@ -1,0 +1,24 @@
+.timer{
+    position: absolute;
+    background: rgb(194, 218, 241);
+    border-radius: 5px;
+    width: fit-content;
+    padding: 0.5rem;
+    right:0;
+    margin-right: 3%;
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 768px) {
+    .timer{
+        position: relative;
+        text-align: center;
+        top:1rem;
+    }
+    .timerContainer{
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        /* background: red; */
+    }
+}
