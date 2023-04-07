@@ -4,7 +4,8 @@
 }
 .dashboard{
     flex:0.83;
-    background: var(--bg-color);
+    /* background: var(--bg-color); */
+    background: black;
 }
 .textBold{
     font-weight: 700;

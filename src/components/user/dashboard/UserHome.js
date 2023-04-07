@@ -3,10 +3,10 @@ import {useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import {useEffect} from 'react';
 // import AllQuizzesData from './AllQuizzesData';
-import CardList from './CardList';
+// import CardList from './CardList';
 // import axios from 'axios';
 // import Navbar from '../navbar/Navbar';
-import LoggedNavbar from '../navbar/LoggedNavbar';
+import LoggedNavbar2 from '../navbar/LoggedNavbar2';
 import { Link } from 'react-router-dom';
 // import Sidebar from './Sidebar';
 import styles from './UserHome.module.css';
@@ -94,12 +94,12 @@ const UserHome=()=>{
     // console.log(user);
   }, [userData, navigate]);
   return (
-    <div className={`d-flex w-100 flex-column align-items-center`}>
+    <div className={`d-flex w-100 flex-column align-items-center`} style={{height:"100vh", background:"black"}}>
         {/* <div className={`${styles.sidebar}`}>
             <Sidebar />
         </div> */}
         <div className={`${styles.dashboard} w-100`}>
-          <LoggedNavbar/>
+          <LoggedNavbar2/>
             <div className='' style={{width:"100%"}}>
             <div className='h5'>
                 <div className='text-secondary mb-1'>Hey! Welcome back</div>
@@ -128,7 +128,7 @@ const UserHome=()=>{
           }
             
             </div> */}
-            <CardList />
+            {/* <CardList className="bg-dark" /> */}
             </div>
         </div>
     </div>

@@ -94,7 +94,7 @@ const UserQuizzes=()=>{
     // console.log(user);
   }, [userData, navigate]);
   return (
-    <div className={`d-flex w-100 flex-column align-items-center`}>
+    <div className={`d-flex w-100 flex-column align-items-center`} style={{height:"100vh", background:"black"}}>
         {/* <div className={`${styles.sidebar}`}>
             <Sidebar />
         </div> */}
@@ -103,7 +103,7 @@ const UserQuizzes=()=>{
             <div className='' style={{width:"100%"}}>
             <div className='h5'>
                 <div className='text-secondary mb-1'>Hey! Welcome back</div>
-                <div className={`${styles.textBold}`}>{userData.name}</div>
+                <div className={`text-bold text-light`}>{userData.name}</div>
             </div>
             <hr></hr>
             <div>

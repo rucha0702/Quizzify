@@ -7,9 +7,10 @@ import { useDispatch, useSelector } from 'react-redux';
 // import { Link } from 'react-router-dom';
 // import Logout from '../logout/logout';
 // import Logout from '../logout/logout';
-import LoggedNavbar from '../navbar/LoggedNavbar'
+import LoggedNavbar2 from '../navbar/LoggedNavbar2'
 import { useNavigate } from 'react-router-dom';
 import styles from './AdditionalDetails.module.css';
+import { Link } from 'react-router-dom';
 // import { url } from '../../../utilities';
 import { url } from '../../utilities';
 
@@ -102,9 +103,12 @@ const Test = () => {
   };
 
   return (
-    <div className={`${styles.additionalDetails} d-flex flex-column align-items-start w-100`}>
+    <div className={`${styles.additionalDetails} d-flex flex-column align-items-start w-100`} style={{background:"black", height:"100vh"}}>
       <div className='w-100'>
-        <LoggedNavbar/>
+        <LoggedNavbar2/>
+      </div>
+      <div className='w-100'>
+              <Link to="/uq">Go to Quiz</Link>
       </div>
       {/* <Navbar
         element={
@@ -117,7 +121,7 @@ const Test = () => {
         }
         logout={<Logout />}
       /> */}
-      <div className='container my-5'>
+      <div className='container my-5 text-light'>
         <form className={`d-flex flex-column align-items-start ${styles.addDetails}`}>
           <div className={`h4 mx-4`}>Edit Profile</div>
           <div className={`d-flex m-2 ${styles.pair}`}>
@@ -212,7 +216,7 @@ const Test = () => {
               dispatch(AddDetails(details));
               updateUserInfo();
             }}
-            className='m-2 mx-4 btn btn-success'
+            className='m-2 mx-4 btn px-5 mt-5 text-light' style={{background:'linear-gradient(to right, #FF69B4, #6495ED)'}}
           >
             Update
           </button>

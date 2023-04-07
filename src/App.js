@@ -1,7 +1,7 @@
 import './App.css';
 import QuizData from './components/quiz/QuizData';
 // import QuestionCounter from './components/quiz/QuestionCounter';
-import UserHome from './components/user/dashboard/UserHome';
+// import UserHome from './components/user/dashboard/UserHome';
 import Login from './components/user/login/Login';
 import Register from './components/user/register/Register';
 // import AdditionalDetails from './reducers/AdditionalDetails';
@@ -23,8 +23,8 @@ function App() {
         <Route path="/login" element={<Login/>} />
         <Route path="/register" element={<Register/>} />
         {/* <Route path="/profile" element={<AdditionalDetails/>} /> */}
-        <Route path="/home" element = {<UserHome />} />
-        <Route path="/profile" element = {<Profile />} />
+        {/* <Route path="/home" element = {<UserHome />} /> */}
+        <Route path="/home" element = {<Profile />} />
         <Route path="/quizzes" element = {<AllQuizzesData />} />
         <Route path="/sub" element = {<SubmittedQuiz />} />
         <Route path="/ins" element = {<QuizInstructions />} />
