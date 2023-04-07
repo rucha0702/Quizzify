@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import styles from './HomePage2.module.css';
+import styles from './HomePage.module.css';
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import Navbar from '../user/navbar/Navbar';
 // import Footer from '../footer/Footer';
-// import HomeImage from './HomeImage';
+import HomeImage from './HomeImage';
 // import Carousel from './Carousel';
 // import { elements } from '../links/links';
 // import axios from 'axios';
@@ -46,7 +46,7 @@ const HomePage = () => {
   }, []);
 
   return (
-    <div className={`${styles.homepage}`} style={{overflowY:"hidden",height:"100vh"}}>
+    <div className={`${styles.homepage}`}>
       <Navbar
         element={
           <Link
@@ -60,19 +60,15 @@ const HomePage = () => {
       <div
         className={`container my-4 ${styles.page1} d-flex flex-column align-items-center`}
       >
-        <div className={`h1 text-light ${styles.heading} text-center mt-4`}>
+        <div className={`h1 ${styles.heading} text-center mt-4`}>
           Hey! are you excited for the <br></br>Recruitments 2023?
         </div>
         <div
           className={`${
             (styles.lightText, styles.extraText)
-          } text-center m-2 mb-4 text-light`}
+          } text-center m-2 mb-4`}
         >
-          Let's get you set up...
-          {/* Made with ❤ by Google Developer Student Clubs JSSATEN️ */}
-        </div>
-        <div>
-          <iframe title='background' src='background.html' style={{position:"fixed",height:"100vh", width:"100vw",zIndex:"1", bottom:"-50%",right:"0"}}/>
+          Made with ❤ by Google Developer Student Clubs JSSATEN️
         </div>
         {/* <div className='d-flex justify-content center'>
           <div className='m-2'>
@@ -97,18 +93,18 @@ const HomePage = () => {
         >
           <Link
             to='/register'
-            className={`m-3 text-decoration-none text-center p-1 px-3 mt-1 text-light ${styles.btnRegister} h-1 rounded`}
+            className={`m-3 text-decoration-none text-center p-1 px-3 mt-1 text-dark ${styles.btnRegister}`}
             type=''
-            style={{background:'linear-gradient(to right, #FF69B4, #6495ED)'}}
           >
             Register Now
            
           </Link>
         </div>
-        {/* <HomeImage /> */}
+        <HomeImage />
       </div>
-      
-        {/* <div className={`${styles.page2} d-flex w-100`}>
+      <div>
+      </div>
+        <div className={`${styles.page2} d-flex w-100`}>
          <div className={`${styles.pg2Left} d-flex w-100 justify-content-center align-items-center`}>left</div>
          <div className={`${styles.pg2Right} d-flex flex-column justify-content-between p-2 py-5 my-4`}>
           <div className={`d-flex flex-column ${styles.rightContent}`}>
@@ -119,7 +115,7 @@ const HomePage = () => {
           </div>
           <div className={`${styles.textBold}`}>and become a part of the most amazing society<span className='text-danger mx-1'>❤</span> </div>
          </div>
-        </div> */}
+        </div>
         {/* <div>
           <Carousel/>
         </div> */}
