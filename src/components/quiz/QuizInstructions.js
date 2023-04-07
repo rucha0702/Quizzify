@@ -17,7 +17,7 @@ const QuizInstructions = () => {
         <div className='h5'>{details.title}</div>
         <div>
             <ul>
-                <div>Duration: {details.duration}</div>
+                <div>Duration: {details.duration} min</div>
                 <div>Multiple choice questions</div>
                 
             </ul>

@@ -126,7 +126,7 @@ const Test = () => {
           <div className={`h4 mx-4`}>Edit Profile</div>
           <div className={`d-flex m-2 ${styles.pair}`}>
           <div className='mx-3'>
-          <label className=''>Name</label> <br></br>
+          <label className='mb-2'>Name</label> <br></br>
             <input
               type='text'
               name='name'
@@ -136,7 +136,7 @@ const Test = () => {
             />
           </div>
           <div className='mx-3'>
-            <label>Contact Number</label> <br></br>
+            <label className='mb-2'>Contact Number</label> <br></br>
             <input
               type='number'
               name='phoneNumber'
@@ -147,16 +147,18 @@ const Test = () => {
           </div>
           <div className={`d-flex m-2  ${styles.pair}`}>
           <div className='mx-3'>
-            <label>Admission Number</label> <br></br>
+            <label className='mb-2'>Admission Number</label> <br></br>
             <input
               type='text'
               name='admissionNumber'
               value={user.admissionNumber}
               onChange={handleChange}
+              className=""
+              style={{background:"#f0f0f0"}}
             />
           </div>
             <div className='mx-3'>
-              <label>Branch</label> <br></br>
+              <label className='mb-2'>Branch</label> <br></br>
               <input
                 type='text'
                 name='branch'
@@ -167,7 +169,7 @@ const Test = () => {
           </div>
           <div className={`d-flex m-2  ${styles.pair}`}>
             <div className='mx-3'>
-              <label>GitHub Profile</label> <br></br>
+              <label className='mb-2'>GitHub Profile</label> <br></br>
               <input
                 type='text'
                 name='githubProfile'
@@ -176,7 +178,7 @@ const Test = () => {
               />
             </div>
             <div className='mx-3'>
-              <label>HackerRank Profile</label> <br></br>
+              <label className='mb-2'>HackerRank Profile</label> <br></br>
               <input
                 type='text'
                 name='hackerRankProfile'
@@ -187,7 +189,7 @@ const Test = () => {
           </div>
           <div className={`d-flex m-2  ${styles.pair}`}>
             <div className='mx-3'>
-              <label>CodeChef/CodeForces Profile</label> <br></br>
+              <label className='mb-2'>CodeChef/CodeForces Profile</label> <br></br>
               <input
                 type='text'
                 name='codeChefProfile'
@@ -196,7 +198,7 @@ const Test = () => {
               />
             </div>
             <div className='mx-3'>
-              <label>Behance</label> <br></br>
+              <label className='mb-2'>Behance</label> <br></br>
               <input
                 type='text'
                 name='codeForcesProfile'

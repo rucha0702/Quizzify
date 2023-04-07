@@ -103,7 +103,7 @@ const QuizDetailsCard = (props) => {
     <div onClick={()=>{setQuizId(id)}} style={{cursor:"pointer"}} className={`${visible===true?"container card d-flex flex-column align-items-start p-4":"d-none"}`}>
      {/* <div className='m-2'>{id}</div> */}
      <div>{quiz.details.title}</div>
-     <div>Duration: {quiz.details.duration}</div>
+     <div>Duration: {quiz.details.duration} min</div>
      <div>Date: {quiz.details.date}</div>
      <div>Year: {quiz.details.year}</div>
     </div>
