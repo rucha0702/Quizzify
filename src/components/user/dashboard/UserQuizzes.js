@@ -10,6 +10,7 @@ import LoggedNavbar from '../navbar/LoggedNavbar';
 // import { Link } from 'react-router-dom';
 // import Sidebar from './Sidebar';
 import styles from './UserHome.module.css';
+import style from "./UserQuizzes.module.css";
 // import { QuizData } from '../../../actions';
 
 const UserQuizzes=()=>{
@@ -94,7 +95,7 @@ const UserQuizzes=()=>{
     // console.log(user);
   }, [userData, navigate]);
   return (
-    <div className={`d-flex w-100 flex-column align-items-center`} style={{height:"100vh", background:"black"}}>
+    <div className={`d-flex w-100 flex-column align-items-center ${style.userQuizzes}`} style={{height:"100vh"}}>
         {/* <div className={`${styles.sidebar}`}>
             <Sidebar />
         </div> */}

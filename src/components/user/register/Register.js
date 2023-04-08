@@ -81,7 +81,7 @@ const Register = () => {
     }
   };
   return (
-    <div className={`${styles.registerContainer}`}>
+    <div className={`${styles.registerContainer} relative`}>
       <Navbar
         element={
           <Link
@@ -92,16 +92,17 @@ const Register = () => {
           </Link>
         }
       />
+      <div className='bgimage'></div>
       <div className=' mb-5'></div>
       {isLoading && <Loader/>}
       <div
         className={`container my-4 w-100 d-flex flex-column align-items-center`}
       >
-        <div className={`h1 ${styles.heading}`}>Create a new account</div>
+        <div className={`h1 ${styles.heading} text-light`}>Create a new account</div>
         <div
           className={`${
             (styles.lightText, styles.extraText)
-          } text-center m-2 mb-4`}
+          } text-center m-2 mb-4 text-light`}
         >
           Let’s get you a new account so that you don’t miss out on our new
           events
@@ -160,10 +161,10 @@ const Register = () => {
           </div>
           <div className={`d-flex ${styles.registerLogin} align-items-center justify-content-between ${styles.bottomNav}`}>
             <div className={`${styles.regLeft}`}>
-              <span className='px-1'>or</span>
+              <span className='px-1 text-light'>or</span>
           <Link
             to='/login'
-            className={`text-decoration-none text-dark`}
+            className={`text-light`}
             style={{fontWeight:"600"}}
           >
            Sign in to your account

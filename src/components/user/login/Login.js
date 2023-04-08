@@ -105,11 +105,11 @@ const Login = () => {
       <div
         className={`container my-4 ${styles.loginContainer} w-100 d-flex flex-column align-items-center`}
       >
-        <div className={`h1 ${styles.heading}`}>Login to your account</div>
+        <div className={`h1 ${styles.heading} text-light`}>Login to your account</div>
         <div
           className={`${
             (styles.lightText, styles.extraText)
-          } text-center m-2 mb-4`}
+          } text-center m-2 mb-4 text-light`}
         >
           Quickly login to your account and enjoy the full experience of
           Rapid Recruit
@@ -141,10 +141,10 @@ const Login = () => {
             </div>
              <div className={`d-flex justify-content-between ${styles.bottomNav}`}>
               <div className={`${styles.logLeft} my-2`}>
-              <span>or</span> 
+              <span className='text-light'>or</span> 
             <Link
               to='/register'
-              className={`my-3 mx-1 text-decoration-none text-dark ${styles.btnRegister}`}
+              className={`my-3 mx-1 text-light ${styles.btnRegister}`}
               type=''
             >
               Create a new account

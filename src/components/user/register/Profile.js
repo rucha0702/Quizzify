@@ -103,7 +103,7 @@ const Test = () => {
   };
 
   return (
-    <div className={`${styles.additionalDetails} d-flex flex-column align-items-start w-100`} style={{background:"black", height:"100vh"}}>
+    <div className={`${styles.additionalDetails} d-flex flex-column align-items-start w-100`} style={{height:"100vh"}}>
       <div className='w-100'>
         <LoggedNavbar2/>
       </div>
@@ -123,7 +123,7 @@ const Test = () => {
       /> */}
       <div className='container my-5 text-light'>
         <form className={`d-flex flex-column align-items-start ${styles.addDetails}`}>
-          <div className={`h4 mx-4`}>Edit Profile</div>
+          <div className={`h4 mx-4`}>What we know about you:</div>
           <div className={`d-flex m-2 ${styles.pair}`}>
           <div className='mx-3'>
           <label className='mb-2'>Name</label> <br></br>

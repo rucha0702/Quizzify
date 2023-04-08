@@ -2,10 +2,19 @@
 
 .registerContainer{
     background: var(--secondaryColor);
+    background: url('../../../images/bluebg.png') no-repeat center center/cover;
     min-height: 100vh;
    position: fixed;
    top:0;
    width:100%;
+}
+.bgimage{
+    content: "";
+    position: absolute;
+    top:0;
+    height: 100px;
+    width: 100px;
+    background: green;
 }
 .heading{
     font-family: 'Plus Jakarta Sans', sans-serif;

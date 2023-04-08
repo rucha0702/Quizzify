@@ -11,3 +11,6 @@
     justify-content: space-between;
     /* color: rgb(233, 171, 171); */
 }
+.additionalDetails{
+    background:url('../../../images/bluebg.png') no-repeat center center/cover;
+}

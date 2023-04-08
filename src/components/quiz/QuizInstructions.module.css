@@ -1,0 +1,6 @@
+.instructions{
+    background: url('../../images/yellow1.png') no-repeat center center/cover;
+    min-height: 100vh;
+    position: fixed;
+    width: 100vw;
+}

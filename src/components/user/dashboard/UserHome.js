@@ -94,7 +94,7 @@ const UserHome=()=>{
     // console.log(user);
   }, [userData, navigate]);
   return (
-    <div className={`d-flex w-100 flex-column align-items-center`} style={{height:"100vh", background:"black"}}>
+    <div className={`d-flex w-100 flex-column align-items-center`} style={{height:"100vh"}}>
         {/* <div className={`${styles.sidebar}`}>
             <Sidebar />
         </div> */}
