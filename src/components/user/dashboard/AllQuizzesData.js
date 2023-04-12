@@ -59,7 +59,8 @@ useEffect(()=>{
         // console.log("current time: ", finalDatetime);
         // currentTime=currentTime;
         let x = currentTime;
-        x = currentTime+1;
+        x = "gdsc";
+        console.log(x)
         // console.log(currentTime)
         // setD(finalDatetime); // Update d with the resolved value
         return finalDatetime;
