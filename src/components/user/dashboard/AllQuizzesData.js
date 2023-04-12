@@ -57,7 +57,9 @@ useEffect(()=>{
 
         const finalDatetime = new Date(finalDatetimeStr);
         // console.log("current time: ", finalDatetime);
-        currentTime=currentTime;
+        // currentTime=currentTime;
+        let x = currentTime;
+        x = currentTime+1;
         // console.log(currentTime)
         // setD(finalDatetime); // Update d with the resolved value
         return finalDatetime;
