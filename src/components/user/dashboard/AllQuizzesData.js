@@ -38,7 +38,7 @@ const AllQuizzesData = () => {
 
 useEffect(()=>{
   const getCurrentTime = async () =>{
-    const data = await fetch('https://worldtimeapi.org/api/timezone/Asia/Kolkata',{ mode: 'no-cors' })
+    const data = await fetch('https://worldtimeapi.org/api/timezone/Asia/Kolkata')
       .then(response => response.json())
       .then(data => {
         const currentTime = data.datetime;
@@ -83,6 +83,7 @@ useEffect(()=>{
     // console.log(d)
     const date1 = new Date(commonStartTime);
 const date2 = new Date(currentTime);
+// const date2 = new Date();
 const date3 = new Date(commonEndTime);
 dispatch(SetTimer(commonEndTime));
     if(date1.getTime()< date2.getTime() && date2.getTime() < date3.getTime())
