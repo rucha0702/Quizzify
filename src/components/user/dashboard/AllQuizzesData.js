@@ -38,7 +38,7 @@ const AllQuizzesData = () => {
 
 useEffect(()=>{
   const getCurrentTime = async () =>{
-    const data = await fetch('http://worldtimeapi.org/api/timezone/Asia/Kolkata')
+    const data = await fetch('https://worldtimeapi.org/api/timezone/Asia/Kolkata')
       .then(response => response.json())
       .then(data => {
         const currentTime = data.datetime;
