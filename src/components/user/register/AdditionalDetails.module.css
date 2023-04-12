@@ -3,11 +3,11 @@
 } */
 .addDetails{
     text-align: start;
-    width: 50%;
+    width: 100%;
     /* background: green; */
 }
 .pair{
-    width: 100%;
+    width: 50%;
     justify-content: space-between;
     /* color: rgb(233, 171, 171); */
 }

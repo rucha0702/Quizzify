@@ -1,4 +1,5 @@
 import axios from "axios";
+const url3 ="https://gdsc-quiz-6e515-default-rtdb.firebaseio.com/time"
 const url2 ="https://gdsc-quiz-6e515-default-rtdb.firebaseio.com/admin"
 const url = "https://gdsc-quiz-6e515-default-rtdb.firebaseio.com/admin/-NMnmMR-wXnEOUx4uuiF";
 // const url = "https://gdsc-quiz-6e515-default-rtdb.firebaseio.com/admin/-NFwxNMyhXlPShUZwm_8";
@@ -11,6 +12,14 @@ export const getAllQuizes = async () => {
     return await axios.get(`${url2}.json`);
   } catch (error) {
     console.log("Error while calling quiz API", error);
+  }
+};
+
+export const getTime = async () => {
+  try {
+    return await axios.get(`${url3}.json`);
+  } catch (error) {
+    console.log("Error while calling Time API", error);
   }
 };
 

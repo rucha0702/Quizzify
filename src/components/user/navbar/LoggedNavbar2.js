@@ -25,7 +25,7 @@ function Navbar(props) {
          
            
            <div className={`${styles.logout} mx-2`} onClick={logout}>Logout</div> 
-           <div className='mx-2'><Link to="/profile" className='text-decoration-none text-dark'>Profile</Link></div> 
+           <div className='mx-2'><Link to="/home" className='text-decoration-none text-dark'>Profile</Link></div> 
           
         </div>
       </div>

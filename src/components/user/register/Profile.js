@@ -122,8 +122,9 @@ const Test = () => {
         logout={<Logout />}
       /> */}
       <div className='container my-5 text-light'>
-        <form className={`d-flex flex-column align-items-start ${styles.addDetails}`}>
-          <div className={`h4 mx-4`}>What we know about you:</div>
+        <form className={`d-flex flex-column align-items-center ${styles.addDetails}`}>
+          <div className={`h4 mx-4`}>Enter Your Details</div>
+          <div className={`mx-4`} style={{fontSize:"14px", color:"lightgrey"}}>profiles are not mandatory</div>
           <div className={`d-flex m-2 ${styles.pair}`}>
           <div className='mx-3'>
           <label className='mb-2'>Name</label> <br></br>

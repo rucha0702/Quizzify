@@ -13,7 +13,7 @@ const QuizInstructions = () => {
     const details = useSelector(state=>state.SetQuizDetails.details)
   return (
     <div className={`${styles.instructions} text-light`}>
-        <div><LoggedNavbar/></div>
+        <div className='text-dark'><LoggedNavbar/></div>
         <div className={`h3 mt-5`}>Quiz Instructions</div>
         <div className='h5'>{details.title}</div>
         <div>
