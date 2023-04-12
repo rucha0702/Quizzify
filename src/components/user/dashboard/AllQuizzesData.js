@@ -57,6 +57,7 @@ useEffect(()=>{
 
         const finalDatetime = new Date(finalDatetimeStr);
         // console.log("current time: ", finalDatetime);
+        currentTime=currentTime;
         // console.log(currentTime)
         // setD(finalDatetime); // Update d with the resolved value
         return finalDatetime;
@@ -75,6 +76,7 @@ useEffect(()=>{
     // console.log("start",commonStartTime)
     // console.log("end", commonEndTime)
     // console.log("curr", currentTime);
+    // currentTime=currentTime
     // console.log(d)
     const date1 = new Date(commonStartTime);
 const date2 = new Date(currentTime);
