@@ -32,7 +32,7 @@ const QuizData = () => {
       }
       else if(status==="S")
       {
-         navigate("/home");
+         navigate("/sub");
       }
         const getQuiz = async (quizId) => {
           const  {data}  = await getQuizData(quizId);
