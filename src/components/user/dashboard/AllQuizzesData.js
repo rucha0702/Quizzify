@@ -37,42 +37,43 @@ const AllQuizzesData = () => {
 
 
 useEffect(()=>{
-  const getCurrentTime = async () =>{
-    const data = await fetch('https://worldtimeapi.org/api/timezone/Asia/Kolkata')
-      .then(response => response.json())
-      .then(data => {
-        const currentTime = data.datetime;
-        const initialDatetime = new Date(data.datetime);
+  // const getCurrentTime = async () =>{
+  //   const data = await fetch('https://worldtimeapi.org/api/timezone/Asia/Kolkata')
+  //     .then(response => response.json())
+  //     .then(data => {
+  //       const currentTime = data.datetime;
+  //       const initialDatetime = new Date(data.datetime);
 
-        const finalDatetimeStr = new Intl.DateTimeFormat('en-US', {
-          weekday: 'short',
-          month: 'short',
-          day: 'numeric',
-          year: 'numeric',
-          hour: 'numeric',
-          minute: 'numeric',
-          second: 'numeric',
-          timeZoneName: 'short'
-        }).format(initialDatetime);
+  //       const finalDatetimeStr = new Intl.DateTimeFormat('en-US', {
+  //         weekday: 'short',
+  //         month: 'short',
+  //         day: 'numeric',
+  //         year: 'numeric',
+  //         hour: 'numeric',
+  //         minute: 'numeric',
+  //         second: 'numeric',
+  //         timeZoneName: 'short'
+  //       }).format(initialDatetime);
 
-        const finalDatetime = new Date(finalDatetimeStr);
-        // console.log("current time: ", finalDatetime);
-        // currentTime=currentTime;
-        let x = currentTime;
-        x = "gdsc";
-        console.log(x)
-        // console.log(currentTime)
-        // setD(finalDatetime); // Update d with the resolved value
-        return finalDatetime;
-      })
-      .catch(error => {
-        console.error(`Error fetching time from API: ${error}`);
-      });
-      return data;
-  }
+  //       const finalDatetime = new Date(finalDatetimeStr);
+  //       // console.log("current time: ", finalDatetime);
+  //       // currentTime=currentTime;
+  //       let x = currentTime;
+  //       x = "gdsc";
+  //       console.log(x)
+  //       // console.log(currentTime)
+  //       // setD(finalDatetime); // Update d with the resolved value
+  //       return finalDatetime;
+  //     })
+  //     .catch(error => {
+  //       console.error(`Error fetching time from API: ${error}`);
+  //     });
+  //     return data;
+  // }
   
   const getTimeLimit = async () => {
-    const currentTime= await getCurrentTime(); // add await here
+    const currentTime= new Date(); // add await here
+    // const currentTime= await getCurrentTime(); // add await here
     const  {data}  = await getTime();
     const commonStartTime = data.commonStartTime;
     const commonEndTime = data.commonEndTime
@@ -82,7 +83,8 @@ useEffect(()=>{
     // currentTime=currentTime
     // console.log(d)
     const date1 = new Date(commonStartTime);
-const date2 = new Date(currentTime);
+const date2 = currentTime;
+// const date2 = new Date(currentTime);
 // const date2 = new Date();
 const date3 = new Date(commonEndTime);
 dispatch(SetTimer(commonEndTime));
