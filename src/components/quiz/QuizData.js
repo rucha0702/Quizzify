@@ -50,7 +50,7 @@ const QuizData = () => {
         <div>
           <LoggedNavbar/>
         </div>
-        <div><Time/></div>
+        <div><Time quiz={questions}/></div>
         <div className={`d-flex w-100`}>
           <div className={`${styles.question}`}>
 

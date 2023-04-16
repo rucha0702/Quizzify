@@ -108,25 +108,46 @@ dispatch(SetTimer(commonEndTime));
   getTimeLimit();
 },[dispatch])
 
+
+const divStyle = {
+  display: visible ? 'flex' : 'none',
+};
+
   return (
-    <div className={`d-flex`}>
-        <div className={`${visible?"d-flex":"d-none"}`}>
+    
+    <div className={`d-flex flex-column px-5`}>
+      <div className={`${visible?"d-block text-light text-start m-2 my-3":"d-none"}`}>First Years</div>
+        <div className={`${visible?"flex-wrap":""}`} style={divStyle}>
           {
             quizzes?Object.keys(quizzes).map((item,i)=>{
               return(
-                quizzes[item].details.status==="1"?
-                <div key={i} className={`m-2`}>
-                  {/* <div>{quizzes[item].details.title}</div>
-                  <div>{item}</div>
-                  <div>{quizzes[item].details.year}</div>
-                  <div>{quizzes[item].details.duration} minutes</div> */}
-                  <QuizDetailsCard quiz={quizzes[item]} id={item}/>
-                </div>:<div></div>
+                quizzes[item].details.status==="1" && quizzes[item].details.year==="1"?
+                <div key={i} className={`m-2 d-flex flex-wrap`} style={{ width:"15rem"}}>
+              
+                  <QuizDetailsCard quiz={quizzes[item]} id={item} className="w-full"/>
+                </div>:<div key={i}></div>
               )
             //  console.log("Status 1",quizzes[item].details)
             }):console.log("error")
           }
         </div>
+
+        <div className={`${visible?"d-block text-light text-start m-2 my-3":"d-none"}`}>Second Years</div>
+        <div className={`${visible?"d-flex flex-wrap":"d-none"}`}>
+          {
+            quizzes?Object.keys(quizzes).map((item,i)=>{
+              return(
+                quizzes[item].details.status==="1" && quizzes[item].details.year==="2"?
+                <div key={i} className={`m-2 d-flex flex-wrap`} style={{ width:"15rem"}}>
+              
+                  <QuizDetailsCard quiz={quizzes[item]} id={item} className="w-full"/>
+                </div>:<div key={i}></div>
+              )
+            //  console.log("Status 1",quizzes[item].details)
+            }):console.log("error")
+          }
+        </div>
+        <div className={`${visible?"d-none":"d-block text-light"}`}>Quizzes will be displayed here</div>
     </div>
   )
 }
