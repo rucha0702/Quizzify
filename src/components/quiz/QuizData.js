@@ -46,7 +46,7 @@ const QuizData = () => {
         // console.log("quiz id", quizId);
       }, [quizId, status, navigate, userData.accessToken])
   return (
-    <div className={`${styles.quizDataContainer} mt-3`}>
+    <div className={`${styles.quizDataContainer} text-light`}>
         <div>
           <LoggedNavbar/>
         </div>
@@ -63,10 +63,18 @@ const QuizData = () => {
           </div>
           
         </div>
-        <QuestionCounter/>
-        {
-          questions[0]?<SubmitData quiz={questions}/>:""
-        }
+        <div className='d-flex justify-content-between align-items-center px-5' style={{width:"100vw"}}>
+          <div>
+                <QuestionCounter/>
+          </div>
+              <div className=''>
+                {
+                  questions[0]?<SubmitData quiz={questions}/>:""
+                }
+              </div>
+        </div>
+        
+        
     </div>
   )
 }

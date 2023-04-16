@@ -111,7 +111,7 @@ const AdditionalDetails = () => {
         }
         logout={<Logout />}
       /> */}
-      <div className='container my-5'>
+      <div className='container my-5 bg-danger'>
         <form>
           <div className='h4 mx-3'>Additional Details</div>
           <div className='m-3'>
@@ -123,8 +123,8 @@ const AdditionalDetails = () => {
               onChange={handleChange}
             />
           </div>
-          <div className='mx-3'>
-            <label>Contact Number</label> <br></br>
+          <div className='mx-3 w-50 bg-danger'>
+            <label className='w-100'>Contact Number</label> <br></br>
             <input
               type='number'
               name='phoneNumber'

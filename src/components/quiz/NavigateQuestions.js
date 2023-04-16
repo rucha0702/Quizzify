@@ -22,7 +22,7 @@ const NavigateQuestions = (props) => {
                         return(
                             <div key={i} onClick={()=>{
                                 dispatch(SetQuestionCount(item)); setRerender(!rerender)
-                            }} className={`${ans[item]<5?styles.navigationButtonChecked:styles.navigationButton} m-2 p-2 d-flex justify-content-center align-items-center rounded`} style={{cursor:"pointer"}}>
+                            }} className={`${ans[item]<5?styles.navigationButtonChecked:styles.navigationButton} m-2 p-2 d-flex justify-content-center align-items-center rounded border border-light`} style={{cursor:"pointer"}}>
                                {item+1}
                             </div>
                         )

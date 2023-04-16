@@ -1,5 +1,5 @@
 .radioStyle{
-    background-color: red;
+    background-color: red !important;
     height:1rem;
     width:1rem;
 }
@@ -10,10 +10,11 @@
     font-weight: 600;
 }
 .questionContainer{
-    width: 50%;
+    width: 80%;
     justify-items: space-between;
     align-items: space-between;
-    background: red !important;
+    border:none;
+    /* background: red !important; */
 }
 .questionBox{
     width: 100%;

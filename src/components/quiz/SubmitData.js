@@ -61,8 +61,8 @@ const SubmitData = (props) => {
 
     }
   return (
-    <div className={`${styles.submitContainer}`}>
-        <button className={`${styles.submitBtn} btn`} onClick={handleSubmit}>Submit Quiz</button>
+    <div className={`${styles.submitContainer} text-light`}>
+        <button className={`${styles.submitBtn} btn text-light`} onClick={handleSubmit}>Submit Quiz</button>
     </div>
   )
 }

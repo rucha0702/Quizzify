@@ -2,11 +2,16 @@
     flex:0.6;
 }
 .navigation{
-    flex:0.4;
+    flex:0.35;
 }
 .quizDataContainer{
-    position: relative;
+    /* position: relative; */
+    min-height: 100vh;
     /* background: red; */
+
+    background: url('../../images/pinkbg.png') no-repeat center center/cover;
+    position: fixed;
+    top:0;
 }
 
 @media (max-width:768px){

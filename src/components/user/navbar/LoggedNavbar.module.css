@@ -1,7 +1,8 @@
 .navContainer{
-    background: var(--lightGreen);
+    /* background: var(--lightGreen); */
     background: white;
     width: 50%;
+    color: black;
     /* position: absolute; */
 
 }

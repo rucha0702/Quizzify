@@ -7,6 +7,8 @@
     --primaryColor:#F3FF69;
     --secondaryColor:#06C270;
     --tertiaryColor:#FECC45;
-    --lightGreen:rgba(140, 164, 16,0.5);
-    --lightGreenShadow: inset 0 -3em 3em rgba(140, 164, 16,0.5);
+    --lightGreen:rgba(210, 212, 199, 0.5);
+    /* --lightGreen:rgba(140, 164, 16,0.5); */
+    --lightGreenShadow: inset 0 -3em 3em #00020F;
+    /* --lightGreenShadow: inset 0 -3em 3em rgba(140, 164, 16,0.5); */
 }

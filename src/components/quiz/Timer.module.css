@@ -1,6 +1,6 @@
 .timer{
     position: absolute;
-    background: rgb(194, 218, 241);
+    /* background: rgb(194, 218, 241); */
     border-radius: 5px;
     width: fit-content;
     padding: 0.5rem;

@@ -28,8 +28,8 @@ const UserQuestion=(props)=>{
     // },[markedArray])
   return (
     
-        <div style={{height:"55vh"}} className={`d-flex flex-column align-items-end justify-content-between m-5 ${styles.questionContainer}border rounded`}>
-        <div className={`p-2 border rounded ${styles.questionBox}`}>
+        <div style={{height:"55vh"}} className={`d-flex flex-column align-items-end justify-content-between m-5 ${styles.questionContainer}`}>
+        <div className={`p-2 ${styles.questionBox}`}>
                  <div className={`${styles.bold} mb-1 text-start`}>Question {count +1}</div>
                  <div className={`${styles.questionStyle} text-start`}>{question.label}</div>
         </div>
@@ -37,7 +37,7 @@ const UserQuestion=(props)=>{
                     {question.values.map((options,j)=>{
                         return(
                             <div key={j} className="radio text-primary my-1 w-100 pointer">
-                                <label style={{cursor:'pointer'}} className={`p-2 w-100 text-start border rounded ${styles.optionLabel}`}>
+                                <label style={{cursor:'pointer'}} className={`p-2 w-100 text-start ${styles.optionLabel} text-light`}>
                                     <input
                                      type="radio"
                                      className={`${styles.radioStyle}`}

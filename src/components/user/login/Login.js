@@ -54,6 +54,7 @@ const Login = () => {
         dispatch(UserDetails(res.data));
         dispatch(AddDetails(res.data.additionalDetails));
         setIsLoading(false);
+        console.log(res.data)
 
         // localStorage.setItem('userinfo', JSON.stringify(res.data));
         // console.log('response present');
@@ -61,7 +62,7 @@ const Login = () => {
         if (res.data.accessToken) {
           navigate('/home', { replace: true });
         } else {
-          alert('wrong credentials');
+          alert(res.message);
           setIsLoading(false);
         }
       } else {
@@ -69,13 +70,13 @@ const Login = () => {
           console.log('data');
           setIsLoading(false)
         } else {
-          alert("Enter correct credentials");
+          alert(res.message);
           console.log('Network error');
           setIsLoading(false);
         }
       }
     } catch (error) {
-      alert("Enter correct credentials");
+      alert(error.message);
       console.log(error);
       setIsLoading(false);
     }

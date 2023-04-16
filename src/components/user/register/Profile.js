@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { AddDetails } from '../../../actions/index';
 import { useDispatch, useSelector } from 'react-redux';
+import Loader from '../login/Loader';
 // import Navbar from '../navbar/Navbar';
 // import { Link } from 'react-router-dom';
 // import Logout from '../logout/logout';
@@ -28,6 +29,8 @@ const Test = () => {
     name: userData.name,
     admissionNumber: userData.admissionNumber,
   });
+
+  const [isLoading, setIsLoading] = useState(false);
 
   const config = {
     headers: {
@@ -66,6 +69,7 @@ const Test = () => {
   }, [details, userData, navigate]);
 
   const updateUserInfo = async () => {
+    setIsLoading(true)
     // e.preventDefault();
     const { name, admissionNumber } = user;
     // userData.name = name;
@@ -85,12 +89,15 @@ const Test = () => {
       // const data = await axios.get('/api/user/myprofile');
       if (data) {
         console.log('updated', data.data);
+        setIsLoading(false)
         alert("Updated")
       } else {
-        console.log('could not update');
+        setIsLoading(false)
+        alert('could not update');
       }
     } catch (error) {
-      console.log(error);
+      setIsLoading(false)
+      alert(error);
     }
   };
 
@@ -122,89 +129,104 @@ const Test = () => {
         logout={<Logout />}
       /> */}
       <div className='container my-5 text-light'>
-        <form className={`d-flex flex-column align-items-center ${styles.addDetails}`}>
+        <form className={`d-flex flex-column align-items-center  ${styles.addDetails}`}>
+          {isLoading && <Loader />}
           <div className={`h4 mx-4`}>Enter Your Details</div>
           <div className={`mx-4`} style={{fontSize:"14px", color:"lightgrey"}}>profiles are not mandatory</div>
           <div className={`d-flex m-2 ${styles.pair}`}>
-          <div className='mx-3'>
-          <label className='mb-2'>Name</label> <br></br>
+          <div className='m-1 mx-3 w-50'>
+          {/* <label className='mb-2 w-100'>Name</label> <br></br> */}
             <input
               type='text'
               name='name'
               value={user.name}
               placeholder='Name'
               onChange={handleChange}
+              className='w-100 rounded p-1 border-0'
             />
           </div>
-          <div className='mx-3'>
-            <label className='mb-2'>Contact Number</label> <br></br>
+          <div className='m-1 mx-3 w-50'>
+            {/* <label className='mb-2'>Contact Number</label> <br></br> */}
             <input
               type='number'
               name='phoneNumber'
               value={details.phoneNumber}
+              placeholder="Contact Number"
               onChange={handleChange}
+              className='w-100 rounded p-1 border-0'
             />
           </div>
           </div>
           <div className={`d-flex m-2  ${styles.pair}`}>
-          <div className='mx-3'>
-            <label className='mb-2'>Admission Number</label> <br></br>
+          <div className='m-1 mx-3 w-50'>
+            {/* <label className='mb-2'>Admission Number</label> <br></br> */}
             <input
               type='text'
               name='admissionNumber'
               value={user.admissionNumber}
+              placeholder="Admission Number"
               onChange={handleChange}
-              className=""
+              className='w-100 rounded p-1 border-0'
               style={{background:"#f0f0f0"}}
             />
           </div>
-            <div className='mx-3'>
-              <label className='mb-2'>Branch</label> <br></br>
+            <div className='m-1 mx-3 w-50'>
+              {/* <label className='mb-2'>Branch</label> <br></br> */}
               <input
                 type='text'
                 name='branch'
                 value={details.branch}
+                placeholder="Branch"
                 onChange={handleChange}
+                className='w-100 rounded p-1 border-0'
               />
             </div>
           </div>
           <div className={`d-flex m-2  ${styles.pair}`}>
-            <div className='mx-3'>
-              <label className='mb-2'>GitHub Profile</label> <br></br>
+            <div className='m-1 mx-3 w-50'>
+              {/* <label className='mb-2'>GitHub Profile</label> <br></br> */}
               <input
                 type='text'
                 name='githubProfile'
                 value={details.githubProfile}
+                placeholder="GitHub Profile"
                 onChange={handleChange}
+                className='w-100 rounded p-1 border-0'
               />
             </div>
-            <div className='mx-3'>
-              <label className='mb-2'>HackerRank Profile</label> <br></br>
+            <div className='m-1 mx-3 w-50'>
+              {/* <label className='mb-2'>HackerRank Profile</label> <br></br> */}
               <input
                 type='text'
                 name='hackerRankProfile'
                 value={details.hackerRankProfile}
+                placeholder="HackerRank Profile"
                 onChange={handleChange}
+                className='w-100 rounded p-1 border-0'
               />
             </div>
           </div>
           <div className={`d-flex m-2  ${styles.pair}`}>
-            <div className='mx-3'>
-              <label className='mb-2'>CodeChef/CodeForces Profile</label> <br></br>
+            <div className='m-1 mx-3 w-50'>
+              {/* <label className='mb-2'>CodeChef/CodeForces Profile</label> <br></br> */}
               <input
                 type='text'
                 name='codeChefProfile'
                 value={details.codeChefProfile}
+                placeholder="CodeChef/CodeForces Profile"
                 onChange={handleChange}
+                className='w-100 rounded p-1 border-0'
               />
             </div>
-            <div className='mx-3'>
-              <label className='mb-2'>Behance</label> <br></br>
+            <div className='m-1 mx-3 w-50'>
+              {/* <label className='mb-2'>Behance</label> <br></br> */}
               <input
                 type='text'
                 name='codeForcesProfile'
                 value={details.codeForcesProfile}
+                placeholder="Behance"
                 onChange={handleChange}
+                className='w-100 rounded p-1 border-0'
               />
             </div>
           </div>
@@ -226,7 +248,7 @@ const Test = () => {
           {/* <div><Logout/></div> */}
         </form>
         {/* <button
-          className='btn btn-success mx-3'
+          className='btn btn-success m-1 mx-3 w-50'
           onClick={() => {
             console.log(additionalDetails);
           }}
