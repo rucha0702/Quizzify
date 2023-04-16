@@ -93,9 +93,10 @@ const Test = () => {
         alert("Updated")
       } else {
         setIsLoading(false)
-        alert('could not update');
+        alert(data.response.data.message);
       }
     } catch (error) {
+      console.log(error.response.data.message)
       setIsLoading(false)
       alert(error);
     }

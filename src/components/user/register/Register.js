@@ -58,11 +58,12 @@ const Register = () => {
         password,
         admissionNumber,
       });
+      console.log("kjxfkh", res);
       // console.log(res.data);
       if (res.data.success === true) {
         setMessage('Registered successfully, proceed to login.');
         setIsLoading(false)
-        alert("Registered succesfully");
+        alert(res.data.message);
         navigate('/login')
       }
       // const data = await res.json();
@@ -75,9 +76,13 @@ const Register = () => {
       //   .then((response) => {
       //     console.log(response);
       //   });
-    } else {
-      alert('Invalid user');
-      setIsLoading(false)
+      else {
+        alert(res.data.message);
+        setIsLoading(false)
+      }
+    } 
+    else{
+      alert("Fill all the details correctly.")
     }
   };
   return (

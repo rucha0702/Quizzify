@@ -62,7 +62,7 @@ const Login = () => {
         if (res.data.accessToken) {
           navigate('/home', { replace: true });
         } else {
-          alert(res.message);
+          alert(res.response.data.message);
           setIsLoading(false);
         }
       } else {
@@ -70,13 +70,13 @@ const Login = () => {
           console.log('data');
           setIsLoading(false)
         } else {
-          alert(res.message);
+          alert(res.response.data.message);
           console.log('Network error');
           setIsLoading(false);
         }
       }
     } catch (error) {
-      alert(error.message);
+      alert(error.response.data.message);
       console.log(error);
       setIsLoading(false);
     }
