@@ -14,8 +14,8 @@ const QuizInstructions = () => {
   return (
     <div className={`${styles.instructions} text-light`}>
         <div className='text-dark'><LoggedNavbar/></div>
-        <div className={`h3 mt-5`}>Quiz Instructions</div>
-        <div className='h5'>{details.title}</div>
+        <div className={`h1 mt-5`}>Instructions To Get Started</div>
+        <div className='h5'>{details.title} : GDSC Recruitments 2023</div>
         <div>
             <ul>
                 <div>Duration: {details.duration} min</div>
