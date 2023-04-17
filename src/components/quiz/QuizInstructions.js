@@ -22,8 +22,8 @@ const QuizInstructions = () => {
                 <li>Multiple choice questions.</li>
                 <li>There is no negative marking.</li>
                 <li>Read each question carefully before answering.</li>
-                <li>Multiple choice questions.</li>
-                <li>Don't wait until the last minute to submit your quiz, it won't be auto-submitted.</li>
+                {/* <li>Multiple choice questions.</li> */}
+                <li className='text-bold'style={{fontWeight:"700"}}>Don't wait until the last minute to submit your quiz, it won't be auto-submitted.</li>
                 
             </ul>
         </div>

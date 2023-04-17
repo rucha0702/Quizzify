@@ -116,13 +116,13 @@ const divStyle = {
   return (
     
     <div className={`d-flex flex-column px-5`}>
-      <div className={`${visible?"d-block text-light text-start m-2 my-3":"d-none"}`}>First Years</div>
+      <div className={`${visible?"d-block text-light text-start m-2 my-3 h4":"d-none"}`}>First Years</div>
         <div className={`${visible?"flex-wrap":""}`} style={divStyle}>
           {
             quizzes?Object.keys(quizzes).map((item,i)=>{
               return(
                 quizzes[item].details.status==="1" && quizzes[item].details.year==="1"?
-                <div key={i} className={`m-2 d-flex flex-wrap`} style={{ width:"15rem"}}>
+                <div key={i} className={`m-2 d-flex flex-wrap`} style={{ width:"31%"}}>
               
                   <QuizDetailsCard quiz={quizzes[item]} id={item} className="w-full"/>
                 </div>:<div key={i}></div>
@@ -132,13 +132,13 @@ const divStyle = {
           }
         </div>
 
-        <div className={`${visible?"d-block text-light text-start m-2 my-3":"d-none"}`}>Second Years</div>
+        <div className={`${visible?"d-block text-light text-start m-2 my-3 mt-5 h4":"d-none"}`}>Second Years</div>
         <div className={`${visible?"d-flex flex-wrap":"d-none"}`}>
           {
             quizzes?Object.keys(quizzes).map((item,i)=>{
               return(
                 quizzes[item].details.status==="1" && quizzes[item].details.year==="2"?
-                <div key={i} className={`m-2 d-flex flex-wrap`} style={{ width:"15rem"}}>
+                <div key={i} className={`m-2 d-flex flex-wrap`} style={{ width:"31%"}}>
               
                   <QuizDetailsCard quiz={quizzes[item]} id={item} className="w-full"/>
                 </div>:<div key={i}></div>

@@ -95,7 +95,7 @@ const UserQuizzes=()=>{
     // console.log(user);
   }, [userData, navigate]);
   return (
-    <div className={`d-flex w-100 flex-column align-items-center ${style.userQuizzes}`} style={{height:"100vh"}}>
+    <div className={`d-flex w-100 flex-column align-items-center ${style.userQuizzes}`} style={{minHeight:"100vh"}}>
         {/* <div className={`${styles.sidebar}`}>
             <Sidebar />
         </div> */}
@@ -103,8 +103,11 @@ const UserQuizzes=()=>{
           <LoggedNavbar/>
             <div className='' style={{width:"100%"}}>
             <div className='h5'>
-                <div className='text-secondary mb-1'>Hey! Welcome back</div>
-                <div className={`text-bold text-light`}>{userData.name}</div>
+                <div className='text-light mb-1 h2'>Hey! Welcome back</div>
+                <div className={`text-bold text-light h2`}>{userData.name}</div>
+            </div>
+            <div className='w-100 text-center'>
+                <div className='small text-light'>Select your respective quiz to get started</div>
             </div>
             <hr></hr>
             <div>

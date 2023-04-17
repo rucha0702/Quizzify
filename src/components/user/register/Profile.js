@@ -116,8 +116,11 @@ const Test = () => {
         <LoggedNavbar2/>
       </div>
       <div className='w-100'>
-              <Link to="/uq">Go to Quiz</Link>
+              <Link to="/"></Link>
       </div>
+      {/* <div className='w-100 mt-2'>
+              <Link to="/uq" className='btn btn-primary'>Go to Quiz</Link>
+      </div> */}
       {/* <Navbar
         element={
           <Link
@@ -129,7 +132,7 @@ const Test = () => {
         }
         logout={<Logout />}
       /> */}
-      <div className='container my-5 text-light'>
+      <div className='container my-4 text-light'>
         <form className={`d-flex flex-column align-items-center  ${styles.addDetails}`}>
           {isLoading && <Loader />}
           <div className={`h4 mx-4`}>Enter Your Details</div>
@@ -242,7 +245,7 @@ const Test = () => {
               dispatch(AddDetails(details));
               updateUserInfo();
             }}
-            className='m-2 mx-4 btn px-5 mt-5 text-light' style={{background:'linear-gradient(to right, #FF69B4, #6495ED)'}}
+            className='m-2 mx-4 btn px-5 mt-5 text-light' style={{background:'linear-gradient(to bottom, grey, black)'}}
           >
             Update
           </button>

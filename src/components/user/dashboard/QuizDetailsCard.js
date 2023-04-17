@@ -100,10 +100,11 @@ const QuizDetailsCard = (props) => {
     //   }, [visible,rerender]);
     
   return (
-    <div onClick={()=>{setQuizId(id)}} style={{cursor:"pointer"}} className={`${visible===true?"container card d-flex flex-column align-items-start p-4":"d-none"}`}>
+    <div onClick={()=>{setQuizId(id)}} style={{cursor:"pointer"}} className={`${visible===true?"container card d-flex flex-column align-items-start p-4 text-start bg-dark text-light border border-light":"d-none"}`}>
      {/* <div className='m-2'>{id}</div> */}
-     <div>{quiz.details.title}</div>
-     <div>Duration: {quiz.details.duration} min</div>
+     <div className='mb-1'>{quiz.details.title} : GDSC Recruitments 2023</div>
+     <div className='text-secondary'>Duration: {quiz.details.duration} min</div>
+     <div className='text-secondary'>Date: 17th April, 2023</div>
      {/* <div>Date: {quiz.details.date}</div> */}
      <div>Year: {quiz.details.year}</div>
     </div>
