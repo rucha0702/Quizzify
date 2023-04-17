@@ -115,12 +115,12 @@ const Test = () => {
       <div className='w-100'>
         <LoggedNavbar2/>
       </div>
-      <div className='w-100'>
+      {/* <div className='w-100'>
               <Link to="/"></Link>
-      </div>
-      {/* <div className='w-100 mt-2'>
-              <Link to="/uq" className='btn btn-primary'>Go to Quiz</Link>
       </div> */}
+      <div className='w-100 mt-2'>
+              <Link to="/uq" className='btn btn-primary'>Go to Quiz</Link>
+      </div>
       {/* <Navbar
         element={
           <Link
